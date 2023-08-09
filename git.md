@@ -20,6 +20,7 @@ coverY: 0
 * [Web oficial](https://git-scm.com/) de Git
 * [Libro oficial ](https://git-scm.com/book/es/v2)de Git (en español)
 * [Cheat Sheet ](https://training.github.com/downloads/es\_ES/github-git-cheat-sheet/)de Git
+* [Documentación oficial ](https://docs.github.com/es)de GitHub
 
 
 
