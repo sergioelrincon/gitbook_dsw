@@ -24,9 +24,9 @@ description: Primeros pasos con PHP
 
 ## Contenidos
 
-*   Instalación
+*   **Instalación**
 
-    Necesitamos instalar el intérprete de PHP. La forma más sencilla de hacerlo es innstalar el paquete XAMPP, que además de incluir el intérprete, también incluye Apache, MySQL y más aplicaciones que necesitaremos a medida que vayamos avanzando.\
+    Necesitamos instalar el intérprete de PHP para poder ejecutar nuestros scripts en PHP. La forma más sencilla de hacerlo es instalar el paquete XAMPP, que además de incluir el intérprete, también incluye Apache, MySQL y más aplicaciones que necesitaremos a medida que vayamos avanzando.\
     Después de realizar la instalación deberíamos [incluir el fichero "php.exe" en el PATH global de Windows](https://www.php.net/manual/en/faq.installation.php#faq.installation.addtopath).
 * [¿Qué es PHP?](https://www.php.net/manual/es/intro-whatis.php)
 * [¿Qué puede hacer PHP?](https://www.php.net/manual/es/intro-whatcando.php)
