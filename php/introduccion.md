@@ -6,12 +6,12 @@ description: Primeros pasos con PHP
 
 ## Recursos
 
-* [PHP en la Wikipedia](https://es.wikipedia.org/wiki/PHP)
+* [Wikipedia](https://es.wikipedia.org/wiki/PHP)
+* [w3schools](https://www.w3schools.com/php/)
 * [Web oficial](https://www.php.net/)
 * [Referencia del lenguaje](https://www.php.net/manual/es/langref.php)
 * [Documentación oficial](https://www.php.net/manual/es/index.php)
-* [XAMPP](https://www.apachefriends.org/es/index.html) \
-  XAMPP es necesario para instalar en nuestro equipo el servidor web Apache, MySQL y el intérprete PHP en Windows. Después de realizar la instalación deberíamos [incluir el fichero "php.exe" en el PATH global de Windows](https://www.php.net/manual/en/faq.installation.php#faq.installation.addtopath).
+* [XAMPP](https://www.apachefriends.org/es/index.html)&#x20;
 * Editores en línea
   * [https://paiza.io/es/projects/new](https://paiza.io/es/projects/new)
   * [https://onlinephp.io/](https://onlinephp.io/)
@@ -24,10 +24,9 @@ description: Primeros pasos con PHP
 
 ## Contenidos
 
-* Comentarios
-* Variables
-  * Consultar el tipo de una variable
-* Mostrar información por pantalla
-* Cadenas de texto
-* Concatenación de texto
-*
+*   Instalación
+
+    Necesitamos instalar el intérprete de PHP. La forma más sencilla de hacerlo es innstalar el paquete XAMPP, que además de incluir el intérprete, también incluye Apache, MySQL y más aplicaciones que necesitaremos a medida que vayamos avanzando.\
+    Después de realizar la instalación deberíamos [incluir el fichero "php.exe" en el PATH global de Windows](https://www.php.net/manual/en/faq.installation.php#faq.installation.addtopath).
+* [¿Qué es PHP?](https://www.php.net/manual/es/intro-whatis.php)
+* [¿Qué puede hacer PHP?](https://www.php.net/manual/es/intro-whatcando.php)

@@ -7,4 +7,4 @@
 ## PHP
 
 * [Introducción](php/introduccion.md)
-* [Estructuras de datos](php/estructuras-de-datos.md)
+* [Sintaxis](php/sintaxis.md)
