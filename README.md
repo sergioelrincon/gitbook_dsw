@@ -17,7 +17,7 @@ coverY: 0
 
 Antes de _picar código_ PHP en VS, deberíamos tener instalado en nuestro equipo el intérprete de PHP, para poder probar desde el propio editor la ejecución del código cuando sea necesario.&#x20;
 
-La instalación del intérprete de PHP la podemos realizar descargando y ejecutando el instalador de XAMPP, cuyo enlace puedes encontrar en el apartado [Introducción a PHP](php/introduccion.md).
+La instalación del intérprete de PHP la podemos realizar descargando y ejecutando el instalador de XAMPP, cuyo enlace puedes encontrar en el apartado [Introducción a PHP](introduccion-a-php/introduccion.md).
 
 ## Extensiones
 

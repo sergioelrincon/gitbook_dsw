@@ -4,9 +4,29 @@
 * [Git](git.md)
 * [GitHub](github.md)
 
-## PHP
+## Introducción a PHP
 
-* [Introducción](php/introduccion.md)
-* [Sintaxis](php/sintaxis.md)
-* [Estructuras de datos básicas](php/estructuras-de-datos-basicas.md)
-* [Estructuras de datos complejas](php/estructuras-de-datos-complejas.md)
+* [Introducción](introduccion-a-php/introduccion.md)
+* [Sintaxis](introduccion-a-php/sintaxis.md)
+* [Estructuras de datos básicas](introduccion-a-php/estructuras-de-datos-basicas.md)
+* [Estructuras de datos complejas](introduccion-a-php/estructuras-de-datos-complejas.md)
+
+## Manejo de formularios
+
+* [Manejo de formularios](manejo-de-formularios/manejo-de-formularios.md)
+
+## Manejo de bases de datos
+
+* [Manejo de bases de datos](manejo-de-bases-de-datos/manejo-de-bases-de-datos.md)
+
+## Sesiones
+
+* [Sesiones](sesiones/sesiones.md)
+
+## Laravel
+
+* [Laravel](laravel/laravel.md)
+
+## Servicios web
+
+* [Page 1](servicios-web/page-1.md)
