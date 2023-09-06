@@ -34,9 +34,21 @@ coverY: 0
 ### Creación y sincronización de repositorios
 
 * [Creación de repositorio en GitHub](https://docs.github.com/es/repositories/creating-and-managing-repositories/creating-a-new-repository)
-* [Clonado del repositorio en local](https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository?tool=cli)
+* Sincronización con el repositorio local
+  * [Clonando en local el repositorio remoto](https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository?tool=cli)
+  * Creando un nuevo repositorio mediante línea de comandos y sincronizándolo con el nuevo repositorio de GitHub:\
+    `git init` \
+    `git add README.md` \
+    `git commit -m "first commit"` \
+    `git branch -M main` \
+    `git remote add origin git@github.com:XXX/YYY.git` \
+    `git push -u origin main`
+  * Sincronizando un repositorio existente con el nuevo repositorio de GitHub y subiendo los cambios mediante línea de comandos:\
+    `git remote add origin git@github.com:XXX/YYY.git` \
+    `git branch -M main` \
+    `git push -u origin main`
 * [Subir cambios a GitHub mediante "git push"](https://docs.github.com/es/repositories/working-with-files/managing-files/adding-a-file-to-a-repository#adding-a-file-to-a-repository-using-the-command-line)
-* [Actualizar cambios en local mediante "git pull"](https://docs.github.com/es/get-started/using-git/getting-changes-from-a-remote-repository#pulling-changes-from-a-remote-repository)
+* [Posteriormente, podremos actualizar cambios en local mediante "git pull"](https://docs.github.com/es/get-started/using-git/getting-changes-from-a-remote-repository#pulling-changes-from-a-remote-repository)
 
 ### Forks
 
