@@ -1,8 +1,6 @@
 # Table of contents
 
 * [Visual Studio Code](README.md)
-* [Git](git.md)
-* [GitHub](github.md)
 
 ## Introducción a PHP
 
@@ -10,6 +8,11 @@
 * [Sintaxis](introduccion-a-php/sintaxis.md)
 * [Estructuras de datos básicas](introduccion-a-php/estructuras-de-datos-basicas.md)
 * [Estructuras de datos complejas](introduccion-a-php/estructuras-de-datos-complejas.md)
+
+## Git
+
+* [Introducción a Git](git/introduccion-a-git.md)
+* [Introducción a GitHub](git/introduccion-a-github.md)
 
 ## Manejo de formularios
 
