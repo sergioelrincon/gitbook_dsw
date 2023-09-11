@@ -13,3 +13,6 @@
 * [switch](https://www.php.net/manual/es/control-structures.switch.php)
 * [include](https://www.php.net/manual/es/function.include.php)
 * [require](https://www.php.net/manual/es/function.require.php)
+* include\_once :interrobang:
+* require\_once :interrobang:
+
