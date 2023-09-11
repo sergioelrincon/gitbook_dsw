@@ -1,8 +1,4 @@
----
-description: '"La belleza está en la simplicidad" (Charles Dickens)'
----
-
-# Estructuras de datos básicas
+# Estructuras de datos
 
 ## Contenidos
 
