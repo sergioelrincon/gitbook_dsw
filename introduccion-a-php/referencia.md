@@ -5,5 +5,7 @@
 * [Referencia de funciones](https://www.php.net/manual/es/funcref.php)
 * [Funciones de manejo de strings](https://www.php.net/manual/es/ref.strings.php)
 * [Funciones de fecha y hora](https://www.php.net/manual/es/ref.datetime.php)
-* [phpinfo()](https://www.php.net/manual/es/function.phpinfo)
-* [gettype()](https://www.php.net/manual/es/function.gettype)
+* [phpinfo()](https://www.php.net/manual/es/function.phpinfo) - Muestra información general del entorno
+* [gettype()](https://www.php.net/manual/es/function.gettype) - Devuelve el tipo de una variable
+* [var\_dump()](https://www.php.net/manual/es/function.var-dump.php) - Muestra información sobre una variable
+* [print\_r()](https://www.php.net/manual/es/function.print-r.php) - Muestra una variable de tipo array de forma estructurada
