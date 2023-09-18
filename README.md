@@ -21,8 +21,10 @@ La instalación del intérprete de PHP la podemos realizar descargando y ejecuta
 
 ## Extensiones
 
+* [PHP Devsense](https://www.devsense.com/es/features#vscode)
 * [PHP Intellisense](https://marketplace.visualstudio.com/items?itemName=zobo.php-intellisense)
 * [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
 * [Format HTML in PHP](https://marketplace.visualstudio.com/items?itemName=rifi2k.format-html-in-php)
-* [PHP Devsense](https://www.devsense.com/es/features#vscode)
+
+
 
