@@ -44,7 +44,8 @@ coverY: 0
   * `--graph`: muestra de forma visual las diferentes ramas.
   * `--all`: visualiza todos los commits, incluyendo los commits futuros.
   * `--oneline`: muestra cada commit en una única línea.
-* git diff \[ [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
+* `git diff` \[ [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
+* `git rm --cached` \[ [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
 * Aliases \[ [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases) ]
 * `git checkout`&#x20;
   * `<fichero>` \[ [referencia](https://git-scm.com/docs/git-checkout) ]  \
