@@ -35,6 +35,7 @@ coverY: 0
 ### Primeros pasos
 
 * `git status` \[ [referencia](https://git-scm.com/docs/git-status) | [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
+  * \-s \[ [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
 * `git branch -m` \[ [referencia](https://git-scm.com/docs/git-branch#Documentation/git-branch.txt--m)]
 * `git add` \[ [referencia](https://git-scm.com/docs/git-add) | [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
 * `git commit` \[ [referencia](https://git-scm.com/docs/git-commit) | [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
@@ -43,6 +44,8 @@ coverY: 0
   * `--graph`: muestra de forma visual las diferentes ramas.
   * `--all`: visualiza todos los commits, incluyendo los commits futuros.
   * `--oneline`: muestra cada commit en una única línea.
+* `git diff` \[ [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
+* `git rm --cached` \[ [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
 * Aliases \[ [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases) ]
 * `git checkout`&#x20;
   * `<fichero>` \[ [referencia](https://git-scm.com/docs/git-checkout) ]  \
@@ -54,8 +57,6 @@ coverY: 0
 ### Comandos avanzados
 
 * git reset
-* Fichero ".gitignore"
-* git diff
 * git checkout
 * git reset --hard
 * git reflog

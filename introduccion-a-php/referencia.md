@@ -10,4 +10,5 @@
 * [gettype()](https://www.php.net/manual/es/function.gettype) - Devuelve el tipo de una variable
 * [var\_dump()](https://www.php.net/manual/es/function.var-dump.php) - Muestra información sobre una variable
 * [print\_r()](https://www.php.net/manual/es/function.print-r.php) - Muestra una variable de tipo array de forma estructurada
-* [ucfirst()](https://www.php.net/manual/es/function.ucfirst.php) - Convierte en mayúsculas el primer carácter de una cadena
+* [call\_user\_func\_array()](https://www.php.net/manual/es/function.call-user-func-array) - Permite invocar a una función cuyo nombre y parámetros se pasan por parámetros
+

@@ -11,6 +11,8 @@ description: Primeros pasos con PHP
 * [Web oficial](https://www.php.net/)
 * [Referencia del lenguaje](https://www.php.net/manual/es/langref.php)
 * [Documentación oficial](https://www.php.net/manual/es/index.php)
+* [Documentación oficial offline](https://www.php.net/download-docs.php)
+* [Zeal (Aplicación para consultar la documentación offline)](https://zealdocs.org/)&#x20;
 * [XAMPP](https://www.apachefriends.org/es/index.html)&#x20;
 * Editores en línea
   * [https://paiza.io/es/projects/new](https://paiza.io/es/projects/new)
