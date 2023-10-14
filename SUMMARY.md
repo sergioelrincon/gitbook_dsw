@@ -18,9 +18,10 @@
 * [Introducción a Git](git/introduccion-a-git.md)
 * [Introducción a GitHub](git/introduccion-a-github.md)
 
-## Manejo de formularios
+## Manejo de formularios y ficheros
 
-* [Manejo de formularios](manejo-de-formularios/manejo-de-formularios.md)
+* [Manejo de formularios](manejo-de-formularios-y-ficheros/manejo-de-formularios.md)
+* [Manejo de ficheros](manejo-de-formularios-y-ficheros/manejo-de-ficheros.md)
 
 ## Manejo de bases de datos
 
