@@ -54,6 +54,15 @@ coverY: 0
     Nos permite movernos a un commit determinado.
 * Fichero ".gitignore" \[ [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
 
+### Ramas
+
+* git branch \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F) ]
+* git checkout/switch \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F) ]
+* git merge \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar) ]
+* git diff \[ referencia | ejemplo ]
+* git branch -d \[ referencia | ejemplo ]
+* Resolución de conflictos \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar) ]
+
 ### Comandos avanzados
 
 * git reset
@@ -63,14 +72,7 @@ coverY: 0
 * git tag
 * git stash
 
-### Ramas
-
-* git branch
-* git switch
-* git merge
-* git diff
-* git branch -d
-* Resolución de conflictos
+###
 
 
 
