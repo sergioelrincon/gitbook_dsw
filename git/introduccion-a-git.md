@@ -59,9 +59,9 @@ coverY: 0
 * `git branch` \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F) ]
 * `git checkout/switch` \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F) ]
 * `git merge` \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar) ]
-* `git diff` \[ referencia | ejemplo ]
 * `git branch -d` \[ referencia | ejemplo ]
 * `git branch -v` \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Gesti%C3%B3n-de-Ramas) ]
+* `git log --oneline --decorate --graph --all`
 * Resolución de conflictos \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar) ]
 
 ### Comandos avanzados
