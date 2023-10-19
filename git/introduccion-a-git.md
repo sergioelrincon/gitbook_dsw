@@ -62,6 +62,7 @@ coverY: 0
 * `git branch -d` \[ referencia | ejemplo ]
 * `git branch -v` \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Gesti%C3%B3n-de-Ramas) ]
 * `git log --oneline --decorate --graph --all`
+* `git push -u origin <nombrederama>`
 * Resolución de conflictos \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar) ]
 
 ### Comandos avanzados
