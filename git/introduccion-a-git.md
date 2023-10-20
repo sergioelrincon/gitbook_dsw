@@ -38,8 +38,10 @@ coverY: 0
   * \-s \[ [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
 * `git branch -m` \[ [referencia](https://git-scm.com/docs/git-branch#Documentation/git-branch.txt--m)]
 * `git add` \[ [referencia](https://git-scm.com/docs/git-add) | [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
+  * `--all`: Añade al área de stage todos los cambios (ficheros nuevos, modificados y eliminados). Es equivalente a `-a`
 * `git commit` \[ [referencia](https://git-scm.com/docs/git-commit) | [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) ]
   * `-m` \[ [referencia](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt--mltmsggt) ]
+  * `-a`: automáticamente añade al área de stage todos los cambios que afecten a tracked files.
 * `git log` \[ [referencia](https://git-scm.com/docs/git-log) | [ejemplo](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) ]
   * `--graph`: muestra de forma visual las diferentes ramas.
   * `--all`: visualiza todos los commits, incluyendo los commits futuros.
@@ -61,8 +63,9 @@ coverY: 0
 * `git merge` \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar) ]
 * `git branch -d` \[ referencia | ejemplo ]
 * `git branch -v` \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Gesti%C3%B3n-de-Ramas) ]
+* `git branch -a`: Muestra todas las ramas (locales y remotas)
 * `git log --oneline --decorate --graph --all`
-* `git push -u origin <nombrederama>`
+* `git push -u origin <nombrederama>:` Sube la rama, desde nuestro repositorio local, a GitHub
 * Resolución de conflictos \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar) ]
 
 ### Comandos avanzados
