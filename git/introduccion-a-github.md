@@ -5,12 +5,13 @@ cover: >-
 coverY: 0
 ---
 
-# GitHub
+# Introducción a GitHub
 
 ## Recursos
 
 * [Web oficial](https://github.com/)
 * [Documentación oficial](https://docs.github.com/es)
+* [Tutorial de GitHub de W3Schools](https://www.w3schools.com/git/git\_remote\_getstarted.asp?remote=github)
 * Clientes gráficos de GitHub
   * [Cliente oficial de GitHub](https://desktop.github.com/)
   * [GitKraken](https://www.gitkraken.com/)

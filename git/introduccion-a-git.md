@@ -14,6 +14,7 @@ coverY: 0
 * [Referencia oficial](https://git-scm.com/docs)
 * [Libro oficial ](https://git-scm.com/book/es/v2)(en español)
 * [Cheat Sheet ](https://training.github.com/downloads/es\_ES/github-git-cheat-sheet/)
+* [Tutorial de Git de W3Schools](https://www.w3schools.com/git/)
 
 ## Contenidos
 
@@ -58,24 +59,18 @@ coverY: 0
 
 ### Ramas
 
-* `git branch` \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F) ]
-* `git checkout/switch` \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F) ]
-* `git merge` \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar) ]
-* `git branch -d` \[ referencia | ejemplo ]
-* `git branch -v` \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Gesti%C3%B3n-de-Ramas) ]
+* `git branch` \[ [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F) ]: Crea una nueva rama
+* `git checkout/switch` \[  [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%C2%BFQu%C3%A9-es-una-rama%3F) ]
+  * `git checkout -b <rama>`: Crea una nueva rama y se cambia a ella en un único comando
+* `git merge` \[ [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar) ]
+* `git branch -d`: Elimina una rama
+* `git branch -v` \[ [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Gesti%C3%B3n-de-Ramas) ]: Muestra las ramas locales
 * `git branch -a`: Muestra todas las ramas (locales y remotas)
-* `git log --oneline --decorate --graph --all`
-* `git push -u origin <nombrederama>:` Sube la rama, desde nuestro repositorio local, a GitHub
-* Resolución de conflictos \[ referencia | [ejemplo](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar) ]
+* `git log --oneline --decorate --graph --all`: Muestra gráficamente el log, incluyendo los commits posteriores al actual. No muestra el detalle de cada commit. Únicamente su id corto.
+* `git push -u origin <nombrederama>:` Sube la rama \<nombrederama> desde nuestro repositorio local a GitHub.
+* [Traer a nuestro repositorio local una rama creada previamente en GitHub](https://www.w3schools.com/git/git\_branch\_pull\_from\_remote.asp?remote=github)
 
-### Comandos avanzados
 
-* git reset
-* git checkout
-* git reset --hard
-* git reflog
-* git tag
-* git stash
 
 ###
 
