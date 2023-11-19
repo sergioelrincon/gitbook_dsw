@@ -29,7 +29,7 @@
 
 ## Sesiones
 
-* [Manejo de sesiones](sesiones/sesiones.md)
+* [Manejo de sesiones y cookies](sesiones/sesiones.md)
 
 ## Laravel
 
