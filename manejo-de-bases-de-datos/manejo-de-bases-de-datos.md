@@ -12,6 +12,7 @@
 * MySQLi - PDO
   * [Conexión](https://www.w3schools.com/php/php\_mysql\_connect.asp)
   * [Inserción](https://www.w3schools.com/php/php\_mysql\_insert.asp)
+    * [Obtención del último ID después de realizar una inserción](https://www.w3schools.com/php/php\_mysql\_insert\_lastid.asp)
   *   Consulta
 
       ```php
