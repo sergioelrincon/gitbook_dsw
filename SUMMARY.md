@@ -11,6 +11,7 @@
 * [Estructuras de control](introduccion-a-php/estructuras-de-control.md)
 * [Funciones](introduccion-a-php/funciones.md)
 * [Estructuras de datos complejas](introduccion-a-php/estructuras-de-datos-complejas.md)
+* [Clases y objetos](introduccion-a-php/clases-y-objetos.md)
 * [Referencia](introduccion-a-php/referencia.md)
 
 ## Git
