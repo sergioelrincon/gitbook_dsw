@@ -1,6 +1,6 @@
 # Introducción
 
-## ¿Qué es Laravel?
+¿Qué es Laravel?
 
 Laravel es un framework que nos proporciona un conjunto de herramientas y recursos que nos facilitan la creación aplicaciones web en PHP.
 
@@ -29,41 +29,13 @@ Un concepto muy importante en Laravel es el de **Router**. El router (web.php) e
 *   Crear un nuevo proyecto Laravel:
 
     ```
-    composer create-project laravel/laravel <nombredelaaplicacion> "9.*" --prefer-dist
+    composer create-project laravel/laravel <nombredelaaplicacion>
     ```
-*   Iniciar el servidor Laravel donde está alojada la aplicación:
-
-    ```
-      cd <nombredelaaplicacion>
-      php artisan serve
-    ```
-* Acceder a ella a través de http://127.0.0.1:8000
+* Acceder a ella a través de http://127.0.0.1/\<nombredelaaplicacion>
 
 ![localhost](img/localhost.png)
 
-### Linux
 
-*   Instalar Composer:
-
-    ```
-      apt-get install composer
-    ```
-
-    * Comprobar la instalación mediante la ejecución de `composer --version`
-*   Crear un nuevo proyecto Laravel:
-
-    ```
-    composer create-project laravel/laravel <nombredelaaplicacion> "9.*" --prefer-dist
-    ```
-*   Iniciar el servidor Laravel donde está alojada la aplicación:
-
-    ```
-      cd <nombredelaaplicacion>
-      php artisan serve
-    ```
-* Acceder a ella a través de http://127.0.0.1:8000
-
-![localhost](img/localhost.png)
 
 ## Artisan
 
