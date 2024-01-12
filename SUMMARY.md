@@ -34,7 +34,7 @@
 
 ## Laravel
 
-* [Introducción](laravel/introduccion-a-laravel.md)
+* [Introducción](laravel/laravel.md)
 
 ## Servicios web
 
