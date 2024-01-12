@@ -1,3 +1,5 @@
 <?php
-echo "hello world";
+$cadena = "mistring";
+
+echo "hello world\n, $cadena";
 ?>
