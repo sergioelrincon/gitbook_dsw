@@ -1,6 +1,6 @@
 # Introducción
 
-¿Qué es Laravel?
+## ¿Qué es Laravel?
 
 Laravel es un framework que nos proporciona un conjunto de herramientas y recursos que nos facilitan la creación aplicaciones web en PHP.
 
@@ -8,7 +8,7 @@ El objetivo de Laravel es conseguir que la implementación de aplicaciones sea u
 
 _Happy developers make the best code"_ (https://laravel.com/docs/4.2/introduction)
 
-### MVC
+## MVC
 
 MVC (Modelo-Vista-Controlador) es el patrón de arquitectura de software que sigue Laravel. Permite separar las funcionalidades de cada parte del código. Enfatiza la separación de la lógica de programación respecto a la presentación. Esto hará que el código esté más ordenado y sea más fácil de mantener.
 
@@ -16,7 +16,7 @@ MVC (Modelo-Vista-Controlador) es el patrón de arquitectura de software que sig
 * **Vista:** se encarga de todo lo que se ve en pantalla. Laravel tiene un template engine llamado _Blade_ que muestra los datos. El modelo consulta la BD, pero el controlador decide qué vista hay que llamar y qué datos presentar.
 * **Controlador:** comunica modelo y vista. Antes de que el modelo consulte la BD, el controlador es el encargado de llamar a un modelo específico. Una vez consultado el modelo, el controlador recibe la información, llama a la vista y le pasa la información.
 
-Un concepto muy importante en Laravel es el de **Router**. El router (web.php) es el encargado de registrar todas las URL o endpoints que va a soportar nuestra aplicación. Asociado a cada ruta existe un controlador que sabe qué modelo debe llamarse y qué vista mostrar cuando el usuario visita dicha ruta o endpoint.
+Un concepto muy importante en Laravel es el de **Router**. El router (/routes/web.php) es el encargado de registrar todas las URL o endpoints que va a soportar nuestra aplicación. Asociado a cada ruta existe un controlador que sabe qué modelo debe llamarse y qué vista mostrar cuando el usuario visita dicha ruta o endpoint.
 
 ![mvc](img/mvc.png)
 
