@@ -41,7 +41,7 @@ Un concepto muy importante en Laravel es el de **Router**. El router (web.php) e
 
 _Artisan_ es el nombre del CLI que incluye Laravel. Permite crear migraciones, controladores, modelos, policies y mucho más.
 
-Se puede invocar mediante el comando `php artisan...`
+Se puede invocar, desde el directorio de la aplicación, mediante el comando `php artisan...`
 
 ## Estructura de carpetas de Laravel
 
@@ -81,13 +81,19 @@ en lugar de:
 <?php } ?>
 ```
 
-Mediante el uso de un motor de plantillas evitamos utilizar sintaxis PHP o etiquetas PHP en nuestros ficheros de vistas. En su lugar deberíamos usar directivas o helpers. La ventaja es que los motores de plantillas limitan el número de funcionalidades disponibles en las vistas y de esta forma se aseguran de que no hacemos _locuras_ en las vistas. Es recomendable que si no encontramos una directiva o helper para una funcionalidad que necesitemos implementar en una vista es, posiblemente, porque dicha funcinalidad no debería estar implementada en la vista. Quizás debería estarlo en un controlador o en otro fichero.
+Mediante el uso de un motor de plantillas **evitamos utilizar sintaxis PHP o etiquetas PHP en nuestros ficheros de vistas**. En su lugar deberíamos usar directivas o helpers. La ventaja es que los motores de plantillas limitan el número de funcionalidades disponibles en las vistas y de esta forma se aseguran de que no hacemos _locuras_ en las vistas. Es recomendable que si no encontramos una directiva o helper para una funcionalidad que necesitemos implementar en una vista es, posiblemente, porque dicha funcinalidad no debería estar implementada en la vista. Quizás debería estarlo en un controlador o en otro fichero.
 
-## Directiva _if_
+Puedes encontrar la documentación oficial de Blade en el [siguiente enlace](https://laravel.com/docs/10.x/blade).
 
-## Directiva _foreach_
+### Directiva _if_
 
-## Directiva _extends_
+Funciona igual que la sentencia "if" de PHP.
+
+### Directiva _foreach_
+
+Funciona igual que el bucle foreach de PHP.
+
+### Directiva _extends_
 
 Se utiliza en las vistas para cargar otras vistas. Por ejemplo, para cargar el menú principal que se podría incluir en el encabezado de todas nuestras páginas.
 
@@ -97,7 +103,7 @@ Se utiliza en las vistas para cargar otras vistas. Por ejemplo, para cargar el m
 
 Esa línea cargaría el contenido de './views/layout/app.blade.php'. Ojo, que en esta directiva las carpetas se separan de los ficheros utilizando el carácter "." en lugar de "/".
 
-## Directiva _yield_
+### Directiva _yield_
 
 Sirve para declarar una _especie_ de marcador/contenedor en una vista para posteriormente inyectarle contenido desde las vistas padre utilizando para ello la directiva @section. Requiere dos parámetros. El primero es el identificador del marcador y el segundo (opcional) es un valor por defecto que se inyectará en caso de que la vista no incuya código para dicho marcador.
 
@@ -115,7 +121,7 @@ Y en la vista principal incluiríamos:
 @endsection
 ```
 
-## Directiva _route_
+### Directiva _route_
 
 Devuelve la ruta a la que hace referencia el primer parámetro. Previamente debe estar definido el nombre de la ruta.
 
@@ -129,7 +135,7 @@ Si la ruta tiene un parámetro, la forma correcta de pasárselo es la siguiente:
 <a href="{{ route('product.show', ['id'=> $product["id"]]) }}">
 ```
 
-## Directivas de autenticación
+### Directivas de autenticación
 
 Permiten mostrar código en las vistas en función de si el usuario está o no autenticado.
 
@@ -143,7 +149,7 @@ Permiten mostrar código en las vistas en función de si el usuario está o no a
 @endguest
 ```
 
-## Helpers
+### Helpers
 
 Los helpers son funciones que se pueden usar dentro de los scripts de Laravel. Para invocar a helpers hay que incluirlos entre \{{ y \}}.
 
