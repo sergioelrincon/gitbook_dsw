@@ -155,7 +155,7 @@ Por ejemplo,
 
 Otro ejemplo lo tenemos en el helper [_asset_](https://laravel.com/docs/9.x/helpers#method-asset), que genera una URL usando el esquema actual de la petición (HTTP o HTTPS).
 
-Más información sobre helpers en https://laravel.com/docs/9.x/helpers
+Más información sobre helpers en [https://laravel.com/docs/10.x/helpers](https://laravel.com/docs/10.x/helpers)
 
 ## Routing en Laravel
 
