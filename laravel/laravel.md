@@ -24,7 +24,7 @@ Un concepto muy importante en Laravel es el de **Router**. El router (/routes/we
 
 ### Windows
 
-* Instalar Composer (https://getcomposer.org/doc/00-intro.md#using-the-installer)
+* Instalar Composer ([https://getcomposer.org/doc/00-intro.md#using-the-installer](https://getcomposer.org/doc/00-intro.md#using-the-installer))
   * Comprobar la instalación mediante la ejecución de `composer --version`
 *   Crear un nuevo proyecto Laravel:
 
@@ -85,7 +85,7 @@ en lugar de:
 <?php } ?>
 ```
 
-Mediante el uso de un motor de plantillas **evitamos utilizar sintaxis PHP o etiquetas PHP en nuestros ficheros de vistas**. En su lugar deberíamos usar directivas o helpers. La ventaja es que los motores de plantillas limitan el número de funcionalidades disponibles en las vistas y de esta forma se aseguran de que no hacemos _locuras_ en las vistas. Es recomendable que si no encontramos una directiva o helper para una funcionalidad que necesitemos implementar en una vista es, posiblemente, porque dicha funcionalidad no debería estar implementada en la vista. Quizás debería estarlo en un controlador o en otro fichero.
+Mediante el uso de un motor de plantillas **evitamos utilizar sintaxis PHP o etiquetas PHP en nuestros ficheros de vistas**. En su lugar deberíamos usar **directivas** o **helpers**. La ventaja es que los motores de plantillas limitan el número de funcionalidades disponibles en las vistas y de esta forma se aseguran de que no hacemos _locuras_ en las vistas. Es recomendable que si no encontramos una directiva o helper para una funcionalidad que necesitemos implementar en una vista es, posiblemente, porque dicha funcionalidad no debería estar implementada en la vista. Quizás debería estarlo en un controlador o en otro fichero.
 
 #### Directiva _extends_
 
@@ -153,17 +153,19 @@ Por ejemplo,
 {{ now() }}
 ```
 
+[Este helper](https://laravel.com/docs/10.x/helpers#method-now) muestra la fecha y hora actuales.
+
 Otro ejemplo lo tenemos en el helper [_asset_](https://laravel.com/docs/9.x/helpers#method-asset), que genera una URL usando el esquema actual de la petición (HTTP o HTTPS).
 
-Más información sobre helpers en [https://laravel.com/docs/10.x/helpers](https://laravel.com/docs/10.x/helpers)
+Puedes encontrar más información sobre helpers en [https://laravel.com/docs/10.x/helpers](https://laravel.com/docs/10.x/helpers)
 
 ## Routing en Laravel
 
-Laravel routing es un mecanismo usado para enrutar todas las peticiones que llegan a nuestrea aplicación a métodos o funciones específicas que las tratarán convenientemente. Las rutas de Laravel aceptan una URI y un _closure_. Los closures son una versión de PHP de lo que sería una función anónima. Un closure es una función que puedes pasar como un objeto, asignar a una variable, o pasar como un parámetro a otra función o método.
+Laravel routing es un mecanismo usado para enrutar todas las peticiones que llegan a nuestrea aplicación a métodos o funciones específicas que las tratarán convenientemente. Las rutas de Laravel aceptan una URI y un _closure_. Los _closure_ son una versión de PHP de lo que sería una función anónima. Un _closure_ es una función que puedes pasar como un objeto, asignar a una variable, o pasar como un parámetro a otra función o método.
 
 Las rutas Laravel se definen en los _route files_ localizados en la carpeta _routes_.
 
-* El fichero _routes/web.php_ define rotas a tu interfaz web.
+* El fichero _routes/web.php_ define rutas a la interfaz web de la aplicación.
 * El fichero _routes/api.php_ define rutas a tu API (si dispones de una). Se utilizan en arquitecturas orientadas a servicio o REST APIs.
 
 El contenido por defecto de _routes/web.php_ es el siguiente:
@@ -174,7 +176,9 @@ Route::get('/', function () {
 });
 ```
 
-Lo cual indica que cuando se acceda a la URL de nuestra aplicación, se mostrará la vista _resources/views/welcome.blade.php_. (_view()_ es un helper que devuelve una instancia de una vista.)
+Lo cual indica que cuando se acceda a la URL raíz de nuestra aplicación, se mostrará la vista _resources/views/welcome.blade.php_. \
+\
+[_view()_](https://laravel.com/docs/9.x/helpers#method-view) es un helper que devuelve una instancia de una vista.
 
 A continuación se muestran otras formas de definir rutas en Laravel:
 
@@ -196,7 +200,7 @@ Route::get('/contacto', function () {
 Route::get('/about', 'App\Http\Controllers\HomeController@about')->name("home.about");
 ```
 
-* La primera conecta la URI "/" con una closure que devuelve una vista (home.index). Además, se le pasa la variable _viewData_ a la vista _home.index_ mediante el encadenamiento del método _with_ en el helper método _view_ (Revisar traducción).
+* La primera conecta la URI "/" con una _closure_ que devuelve una vista (home.index). Además, se le pasa la variable _viewData_ a la vista _home.index_ mediante el encadenamiento del método _with_ en el helper método _view_ (Revisar traducción).
 * La última ruta conecta la URL "/about" con el método _about_ de la clase _HomeController_, alojado en la carpeta /App/Http/Controllers". Además, definimos un nombre personalizado de ruta mediante el encadenamiento del método _name_ en la definición de la ruta. ¿Qué utilidad crees que tiene darle un nombre personalizado a la ruta?
 
 Las rutas también pueden incluir parámetros:
