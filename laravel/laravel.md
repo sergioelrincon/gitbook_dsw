@@ -57,6 +57,14 @@ De momento, destacamos los siguientes directorios/ficheros de la estructura de u
 * **./vendor**: donde se colocan las dependencias de composer.
 * **./env**: contiene parámetros de configuración que pueden variar en función de dónde se esté ejecutando la aplicación (nombre de la base de datos, usuario y contraseña, etc.).
 
+## Git
+
+Por defecto, al crear un proyecto Laravel, se genera un fichero ".gitignore" que incluye una serie de ficheros y carpetas específicos de cada usuario, que no se deberían subir a un repositorio Git. Esos directorios y ficheros son imprescindibles para ejecutar la aplicación Laravel. Para generarlos, después de hacer un clon del repositorio, deberemos ejecutar los siguientes comandos dentro de la carpeta del proyecto:
+
+* composer install
+* cp .env.example .env
+* php artisan key:generate
+
 ## Blade
 
 Es el motor de plantillas de Laravel. Las plantillas Blade utilizan la extensión ".blade.php" y se almacenan en "resources/views". En los ficheros blade tendremos una mezcla de código HTML junto con elementos y directivas Blade.
