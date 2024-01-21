@@ -363,7 +363,7 @@ $table->string("username");
 
 El método "timestamps" creará las columnas "created\_at" y "updated\_at".
 
-Podemos conocer todos los tipos de campos en [https://laravel.com/docs/9.x/migrations#available-column-types](https://laravel.com/docs/9.x/migrations#available-column-types)
+Podemos conocer todos los tipos de campos en [https://laravel.com/docs/10.x/migrations#available-column-types](https://laravel.com/docs/10.x/migrations#available-column-types)
 
 ### Configuración de la BD a través del fichero .env
 
