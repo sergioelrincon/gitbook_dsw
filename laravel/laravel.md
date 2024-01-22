@@ -401,7 +401,7 @@ Eloquent proporciona a nuestros modelos los siguientes métodos:
 * Product::create(\['name' => 'TV', ...]): crea un nuevo registro en la base de datos.
 * Product::destroy(1): elimina el registro con id=1.
 
-El siguiente ejemplo muestra cómo podemos acceder al restultado de uno de los métodos antriores:
+El siguiente ejemplo muestra cómo podemos acceder al restultado de uno de los métodos anteriores:
 
 ```
 $product = Product::findOrFail(1);  
