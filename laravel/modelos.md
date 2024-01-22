@@ -13,7 +13,7 @@ php artisan make:model Product
 Consideraciones importantes respecto al modelo:
 
 * Eloquent asume que cada modelo está asociado a una tabla que tiene una clave primaria denominada "id". Por lo tanto, en todas nuestras migraciones usaremos el método "id" que crea dicho campo.
-* Eloquent asume que el modelo "Cliente" guarda sus registros en una table denominada "Clientes". Esto se aplica a todos los modelos. Más información sobre los nombres de las tablas en [el siguiente enlace](https://laravel.com/docs/8.x/eloquent#table-names).
+* Eloquent asume que el modelo "Client" guarda sus registros en una table denominada "Clients". Esto funciona correctamente con los nombres de las tablas en inglés, pero en español puede generar algún problema. Posteriormente veremos cómo resolverlo. Más información sobre los nombres de las tablas en el [siguiente enlace](https://laravel.com/docs/10.x/eloquent#table-names).
 * Por defecto, Eloquent espera que estén creados los campos "created\_at" y "updated\_at". Por lo tanto, en todas nuestras migraciones utilizaremos el método "timestamps()" visto anteriormente.
 
 Eloquent proporciona a nuestros modelos los siguientes métodos:
