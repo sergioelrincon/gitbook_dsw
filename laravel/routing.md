@@ -40,7 +40,11 @@ Route::get('/about', 'App\Http\Controllers\HomeController@about')->name("home.ab
 ```
 
 * La primera conecta la URI "/" con una _closure_ que devuelve una vista (home.index). Además, se le pasa la variable _viewData_ a la vista _home.index_ mediante el encadenamiento del [método _with_](https://laravel.com/docs/10.x/views#passing-data-to-views)&#x20;
-* La última ruta conecta la URL "/about" con el método _about_ de la clase _HomeController_, alojado en la carpeta /App/Http/Controllers". Además, definimos un nombre personalizado de ruta mediante el encadenamiento del método _name_ en la definición de la ruta. ¿Qué utilidad crees que tiene darle un nombre personalizado a la ruta?
+* La última ruta conecta la URL "/about" con el método _about_ de la clase _HomeController_, alojado en la carpeta /App/Http/Controllers". Además, [definimos un nombre personalizado de ruta](https://laravel.com/docs/10.x/routing#named-routes) mediante el encadenamiento del método _name_ en la definición de la ruta.&#x20;
+
+También podemos utilizar la siguiente sintaxis para relacionar URI y controlador:
+
+`Route::get('/user', [UserController::class, 'index']);`
 
 Las rutas también pueden incluir parámetros:
 

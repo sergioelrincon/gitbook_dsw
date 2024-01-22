@@ -58,7 +58,7 @@ Y en la vista principal incluiríamos:
 
 #### Directiva _route_
 
-Devuelve la ruta a la que hace referencia el primer parámetro. Previamente debe estar definido el nombre de la ruta.
+Devuelve la URL a la que hace referencia el primer parámetro. Previamente debe estar definido el nombre de la ruta.
 
 ```
 <a href="{{ route('product.show' }}">...</a>
@@ -69,6 +69,8 @@ Si la ruta tiene un parámetro, la forma correcta de pasárselo es la siguiente:
 ```
 <a href="{{ route('product.show', ['id'=> $product["id"]]) }}">
 ```
+
+Puedes encontrar más información sobre route en la [documentación oficial](https://laravel.com/docs/10.x/routing#generating-urls-to-named-routes).
 
 #### Directivas de autenticación
 
