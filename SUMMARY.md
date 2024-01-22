@@ -35,6 +35,12 @@
 ## Laravel
 
 * [Introducción](laravel/laravel.md)
+* [Blade](laravel/blade.md)
+* [Routing](laravel/routing.md)
+* [Controladores](laravel/controladores.md)
+* [Bases de datos](laravel/bases-de-datos.md)
+* [Modelos](laravel/modelos.md)
+* [Autenticación](laravel/autenticacion.md)
 
 ## Servicios web
 
