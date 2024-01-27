@@ -72,6 +72,16 @@ Si la ruta tiene un parámetro, la forma correcta de pasárselo es la siguiente:
 
 Puedes encontrar más información sobre route en la [documentación oficial](https://laravel.com/docs/10.x/routing#generating-urls-to-named-routes).
 
+#### Directiva CSRF
+
+La directiva @csrf en Laravel es una forma corta de incluir un token CSRF (Cross-Site Request Forgery) en los formularios HTML. Este token es una medida de seguridad importante en aplicaciones web para prevenir ataques de tipo CSRF.
+
+En un ataque CSRF, un atacante podría engañar a los usuarios de tu aplicación para que realicen acciones no intencionadas en un sitio web. Al incluir un token CSRF en tus formularios, Laravel se asegura de que cada solicitud que modifica datos proviene realmente del usuario de la aplicación y no de un tercero.
+
+Cuando utilizas la directiva @csrf en un formulario, Laravel genera automáticamente un campo oculto con un token único para ese usuario y esa sesión. Cuando el formulario se envía, el token se envía junto con los demás datos del formulario. Luego, Laravel verifica este token en el servidor para asegurarse de que la solicitud es legítima.
+
+Si el token no está presente o no coincide, Laravel rechazará la solicitud, protegiendo así la aplicación contra ataques CSRF. Es una práctica recomendada y muy importante incluir esta directiva en todos tus formularios HTML que realicen cambios en los datos del servidor (como inserciones, actualizaciones o eliminaciones).
+
 #### Directivas de autenticación
 
 Permiten mostrar código en las vistas en función de si el usuario está o no autenticado.
