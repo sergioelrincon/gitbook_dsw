@@ -111,3 +111,11 @@ Por ejemplo,
 Otro ejemplo lo tenemos en el helper [_asset_](https://laravel.com/docs/9.x/helpers#method-asset), que genera una URL usando el esquema actual de la petición (HTTP o HTTPS).
 
 Puedes encontrar más información sobre helpers en [https://laravel.com/docs/10.x/helpers](https://laravel.com/docs/10.x/helpers)
+
+### Variables
+
+#### Variable $errors
+
+Laravel proporciona una variable $errors que está disponible en todas las vistas. Permite acceder a los errores generados por la aplicación.
+
+Mediante el método $errors->any() se puede consultar si existe algún error, y en caso afirmativo, se pueden recorrer todos los errores mendiante el método $errors->all(), que devuelve un array con los mensajes de cada uno de los errores.
