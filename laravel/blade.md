@@ -82,6 +82,8 @@ Cuando utilizas la directiva @csrf en un formulario, Laravel genera automáticam
 
 Si el token no está presente o no coincide, Laravel rechazará la solicitud, protegiendo así la aplicación contra ataques CSRF. Es una práctica recomendada y muy importante incluir esta directiva en todos tus formularios HTML que realicen cambios en los datos del servidor (como inserciones, actualizaciones o eliminaciones). Se debe incluir dentro del formulario HTML, en la vista correspondiente.
 
+Más información, en la [documentación oficial](https://laravel.com/docs/10.x/csrf).
+
 #### Directivas de autenticación
 
 Permiten mostrar código en las vistas en función de si el usuario está o no autenticado.
