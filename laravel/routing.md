@@ -70,7 +70,7 @@ Las rutas que utilizan el método POST nos permiten recibir y almacenar informac
 Route::post('/test/store', 'App\Http\Controllers\TestController@store')->name("test.store");
 ```
 
-En este caso, el método "store" deberá definirse con un parámetro: `function store (Request $request)`. Dicho parámetro es un objeto que nos permitirá interactuar con la petición HTTP realizada por nuestra aplicación para acceder a las cookies, campos, ficheros, etc.
+En este caso, el método "store" deberá definirse con un parámetro de tipo Request: `function store (Request $request)`. Dicho parámetro es un objeto que nos permitirá interactuar con la petición HTTP realizada por nuestra aplicación para acceder a las cookies, campos, ficheros, etc.
 
 En el método "store" podremos establecer las reglas de validación de los campos recibidos. Podemos consultar información sobre las reglas de validación disponibles en [https://laravel.com/docs/10.x/validation#available-validation-rules](https://laravel.com/docs/10.x/validation#available-validation-rules). A continuación mostramos un ejemplo de validación:
 
