@@ -40,6 +40,7 @@
 * [Controladores](laravel/controladores.md)
 * [Bases de datos](laravel/bases-de-datos.md)
 * [Modelos](laravel/modelos.md)
+* [Storage](laravel/storage.md)
 * [Autenticación](laravel/autenticacion.md)
 
 ## Servicios web
