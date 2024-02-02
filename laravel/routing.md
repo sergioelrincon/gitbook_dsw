@@ -62,9 +62,13 @@ public function show($id) {
 
 A través del comando `php artisan route:list` puedo consultar todas las rutas creadas en nuestra aplicación.
 
+### Rutas GET
+
+Son las rutas mostradas en el ejemplo anterior. Se utilizan para solicitar datos de un recurso específico. Por ejemplo, cuando un usuario accede a una página de nuestra aplicación, se realiza una petición GET. Estas rutas se definen con el método `get` y son las más comunes para cargar vistas o páginas.
+
 ### Rutas POST
 
-Las rutas que utilizan el método POST nos permiten recibir y almacenar información enviada a través de un formulario. Su formato sería el siguiente:
+Las rutas que utilizan el método POST se utilizan para enviar datos al servidor para crear un nuevo recurso. Por lo general, se utilizan en formularios cuando se envían datos al servidor, como la creación de un nuevo usuario o el envío de un formulario de contacto. Su formato sería el siguiente:
 
 ```
 Route::post('/test/store', 'App\Http\Controllers\TestController@store')->name("test.store");
@@ -94,7 +98,7 @@ Más información sobre el método _input_ en [https://laravel.com/docs/10.x/req
 
 ### Rutas DELETE
 
-Las rutas que usan el método DELETE de HTTP las utilizaremos para eliminar elementos de nuestro modelo. A continuación mostramos un ejemplo:
+Las rutas que usan el método DELETE de HTTP se utilizan para eliminar un recurso específico. Si tenemos un registro en nuestra base de datos que deseamos permitir que los usuarios eliminen, usaríamos una ruta DELETE para manejar esa solicitud. A continuación mostramos un ejemplo:
 
 ```
 Route::delete('/admin/products/{id}/delete', 'App\Http\Controllers\Admin\AdminProductController@delete')->name("admin.product.delete");
