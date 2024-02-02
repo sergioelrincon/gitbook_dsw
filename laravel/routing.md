@@ -96,6 +96,10 @@ $newCar->save();
 
 Más información sobre el método _input_ en [https://laravel.com/docs/10.x/requests#retrieving-input](https://laravel.com/docs/10.x/requests#retrieving-input)
 
+Para validaciones más complejas podemos hacer uso de los Form requests. Pueden consultar la documentación oficial en la [siguiente página de la documentación oficial de Laravel](https://laravel.com/docs/10.x/validation#form-request-validation).
+
+También pueden encontrar más información sobre la personalización de los mensajes de error en la [siguiente página de la documentación oficial de Laravel](https://laravel.com/docs/10.x/validation#customizing-the-error-messages).
+
 ### Rutas DELETE
 
 Las rutas que usan el método DELETE de HTTP se utilizan para eliminar un recurso específico. Si tenemos un registro en nuestra base de datos que deseamos permitir que los usuarios eliminen, usaríamos una ruta DELETE para manejar esa solicitud. A continuación mostramos un ejemplo:
