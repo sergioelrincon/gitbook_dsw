@@ -53,10 +53,10 @@ De esta forma, se permite al usuario acceder a la ruta solo si su rol es "editor
 En nuestro fichero "web.php" debemos incluir el siguiente código para controlar el acceso a las rutas que deseemos. La forma de hacerlo es la siguiente:
 
 ```
-Route::middleware('publicador')->group(function () {
+Route::middleware('editor')->group(function () {
     Route::get('/publicar', 'App\Http\Controllers\Admin\AdminPubController@index')->name("admin.pub.index");
     ...
 });
 ```
 
-Además, también tendremos que registrar el middleware en "app/Http/Kernel.php", añadiendo la línea `'admin' => \App\Http\Middleware\AdminAuthMiddleware::class,` al array $routeMiddleware.
+Además, también tendremos que registrar el middleware en "app/Http/Kernel.php", añadiendo la línea `'editor' => \App\Http\Middleware\AdminAuthMiddleware::class,` al array $routeMiddleware.
