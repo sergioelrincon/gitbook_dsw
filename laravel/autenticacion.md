@@ -1,6 +1,6 @@
 # Autenticación
 
-Laravel dispone de varios [sistemas de autenticación](https://laravel.com/docs/9.x/starter-kits). Nosotros utilizaremos _laravel/ui_, ya que es el único que no requiere frameworks CSS o Javascript adicionales (Tailwind CSS, React, Vue, etc.).
+Laravel dispone de varios [sistemas de autenticación](https://laravel.com/docs/10.x/starter-kits). Nosotros utilizaremos _laravel/ui_, ya que es el único que no requiere frameworks CSS o Javascript adicionales (Tailwind CSS, React, Vue, etc.).
 
 La instalación de _laravel/ui_ se realiza a través del siguiente comando:
 
