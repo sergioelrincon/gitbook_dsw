@@ -40,3 +40,6 @@ Para utilizar un modelo determinado en nuestros controladores deberemos insertar
 use App\Models\Product;
 ```
 
+## Relaciones
+
+Pueden encontrar información sobre las relaciones en Laravel [en la documentación oficial](https://laravel.com/docs/10.x/eloquent-relationships).
