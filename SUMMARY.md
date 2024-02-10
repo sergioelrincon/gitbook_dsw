@@ -45,4 +45,7 @@
 
 ## Servicios web
 
-* [Servicios web](servicios-web/servicios-web.md)
+* [Introducción](servicios-web/servicios-web-intro.md)
+* [API REST](servicios-web/api-rest.md)
+* [JSON](servicios-web/json.md)
+* [API REST PHP](servicios-web/api-rest-php.md)
