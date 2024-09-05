@@ -17,6 +17,7 @@ description: Primeros pasos con PHP
 * Editores en línea
   * [https://paiza.io/es/projects/new](https://paiza.io/es/projects/new)
   * [https://onlinephp.io/](https://onlinephp.io/)
+  * [https://idx.dev/](https://idx.dev/)
 
 ## Referencias
 
