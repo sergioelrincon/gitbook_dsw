@@ -12,8 +12,8 @@ description: Primeros pasos con PHP
 * [Referencia del lenguaje](https://www.php.net/manual/es/langref.php)
 * [Documentación oficial](https://www.php.net/manual/es/index.php)
 * [Documentación oficial offline](https://www.php.net/download-docs.php)
-* [Zeal (Aplicación para consultar la documentación offline)](https://zealdocs.org/)&#x20;
-* [XAMPP](https://www.apachefriends.org/es/index.html)&#x20;
+* [Zeal (Aplicación para consultar la documentación offline)](https://zealdocs.org/)
+* [XAMPP](https://www.apachefriends.org/es/index.html)
 * Editores en línea
   * [https://paiza.io/es/projects/new](https://paiza.io/es/projects/new)
   * [https://onlinephp.io/](https://onlinephp.io/)
@@ -33,3 +33,5 @@ description: Primeros pasos con PHP
     Después de realizar la instalación deberíamos [incluir el fichero "php.exe" en el PATH global de Windows](https://www.php.net/manual/en/faq.installation.php#faq.installation.addtopath).
 * [¿Qué es PHP?](https://www.php.net/manual/es/intro-whatis.php)
 * [¿Qué puede hacer PHP?](https://www.php.net/manual/es/intro-whatcando.php)
+
+<figure><img src="../.gitbook/assets/Web+Application+Architectures.jpg" alt=""><figcaption></figcaption></figure>
