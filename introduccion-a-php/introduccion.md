@@ -14,6 +14,8 @@ description: Primeros pasos con PHP
 * [Documentación oficial offline](https://www.php.net/download-docs.php)
 * [Zeal (Aplicación para consultar la documentación offline)](https://zealdocs.org/)
 * [XAMPP](https://www.apachefriends.org/es/index.html)
+   
+  XAMPP es el entorno más popular de desarrollo con PHP. Es una distribución de Apache completamente gratuita y fácil de instalar que contiene MariaDB, PHP y Perl. El paquete de instalación de XAMPP ha sido diseñado para ser increíblemente fácil de instalar y usar.
 * Editores en línea
   * [https://paiza.io/es/projects/new](https://paiza.io/es/projects/new)
   * [https://onlinephp.io/](https://onlinephp.io/)
