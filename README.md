@@ -19,7 +19,7 @@ Antes de _picar código_ PHP en VS, deberíamos tener instalado en nuestro equip
 
 La instalación del intérprete de PHP la podemos realizar descargando y ejecutando el instalador de XAMPP, cuyo enlace puedes encontrar en el apartado [Introducción a PHP](introduccion-a-php/introduccion.md).
 
-## Extensiones
+## Extensiones recomendadas
 
 * [PHP Devsense](https://www.devsense.com/es/features#vscode)
 * [PHP Intellisense](https://marketplace.visualstudio.com/items?itemName=zobo.php-intellisense)
