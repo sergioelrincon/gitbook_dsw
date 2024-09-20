@@ -21,6 +21,7 @@
 
 ## Manejo de formularios y ficheros
 
+* [GET y POST](manejo-de-formularios-y-ficheros/get-y-post.md)
 * [Manejo de formularios](manejo-de-formularios-y-ficheros/manejo-de-formularios.md)
 * [Manejo de ficheros](manejo-de-formularios-y-ficheros/manejo-de-ficheros.md)
 
