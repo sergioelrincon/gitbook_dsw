@@ -24,7 +24,8 @@ Un concepto muy importante en Laravel es el de **Router**. El router (/routes/we
 
 ### Windows
 
-* Instalar Composer ([https://getcomposer.org/doc/00-intro.md#using-the-installer](https://getcomposer.org/doc/00-intro.md#using-the-installer))
+* Instalar Composer ([https://getcomposer.org/doc/00-intro.md#using-the-installer](https://getcomposer.org/doc/00-intro.md#using-the-installer))\
+  Composer es un gestor de dependencias para PHP. Es una herramienta que facilita la instalación y actualización de las bibliotecas y paquetes que necesita un proyecto PHP, de manera que se evite tener que hacer todo manualmente. Laravel, como muchos frameworks, tiene varias dependencias (bibliotecas de código que necesita para funcionar), y Composer se encarga de descargarlas e instalarlas automáticamente. De esta forma, no tenemos que preocuparnos por buscar, descargar y configurar cada uno de esos componentes, ya que Composer hace el trabajo por nosotros.&#x20;
   * Comprobar la instalación mediante la ejecución de `composer --version`
 *   Crear un nuevo proyecto Laravel:
 
@@ -67,7 +68,7 @@ Por defecto, al crear un proyecto Laravel, se genera un fichero ".gitignore" que
 
 ## Extensiones para Visual Studio Code
 
-Se recomienda instalar "Laravel Blade Snippets", "Laravel Snippets", "Laravel goto view" y "Laravel Extra Intellisense". Para PHP, "PHP Intellisense", "PHP Intelephense" y "PHP Namespace Resolver"
+Te recomiendo instalar "Laravel Blade Snippets", "Laravel Snippets", "Laravel goto view" y "Laravel Extra Intellisense".&#x20;
 
 ## Varios
 
