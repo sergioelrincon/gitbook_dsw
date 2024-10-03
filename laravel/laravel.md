@@ -62,11 +62,11 @@ De momento, destacamos los siguientes directorios/ficheros de la estructura de u
 
 Por defecto, al crear un proyecto Laravel, se genera un fichero ".gitignore" que incluye una serie de ficheros y carpetas específicos de cada usuario, que no se deberían subir a un repositorio Git. Esos directorios y ficheros son imprescindibles para ejecutar la aplicación Laravel. Para generarlos, después de hacer un clon del repositorio, deberemos ejecutar los siguientes comandos dentro de la carpeta del proyecto:
 
-* composer install
-* cp .env.example .env
-* php artisan key:generate
-* touch database/database.sqlite
-* php artisan migrate
+* **composer install** -> Necesario para instalar todas las dependencias requeridas por el proyecto
+* **cp .env.example .env** -> Por motivos de seguridad, el archivo .env (archivo de varriables de entorno) está incluido en el .gitignore, lo que significa que no se sube al repositorio de Git. Esto previene que información sensible se exponga en repositorios públicos o se comparta inadvertidamente con otros colaboradores.
+* **php artisan key:generate** -> Genera una clave de aplciación única. Laravel utiliza la clave de aplicación (APP\_KEY en el archivo .env) para cifrar y descifrar datos sensibles, como sesiones de usuario, tokens y otros elementos que requieren seguridad. Esta clave asegura que los datos cifrados solo puedan ser interpretados por tu aplicación. La clave garantiza que los datos cifrados estén protegidos y solo accesibles por tu aplicación. Sin la clave, características como autenticación y manejo de sesiones pueden fallar.
+* **touch database/database.sqlite** -> A partir de la versión 11 de Laravel, la información sobre las sesiones de usuario se almacena en una base de datos SQLite. Dicha base de datos se ignora a través del fichero .gitignore correspondiente, ya que no tiene sentido compartir sesiones de usuario en diferentes máquinas.
+* **php artisan migrate** -> Este comando genera las tablas necesarias para almacenar las sesiones en la base de datos SQLite. Sin la ejecución de este comando, a pesar de que la base de datos se cree con el comando anterior, ésta permanecerá vacía.
 
 ## Extensiones para Visual Studio Code
 
