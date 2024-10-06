@@ -64,6 +64,28 @@ Hay que recordar que en el patrón MVC (Modelo-Vista-Controlador), el controlado
 
     * Aunque es válido, puede ser menos práctico si necesitas pasar múltiples variables.
 
+### Respuesta a una solicitud POST en el controlador
+
+Cuando un usuario envía un formulario (solicitud POST), el navegador espera una respuesta del servidor. En este caso, lo ideal es redirigir a otra ruta usando redirect().&#x20;
+
+```php
+phpCopiar códigoreturn redirect()->route('doubt.form')->with('success', 'Su duda ha sido enviada correctamente.');
+```
+
+De esta forma:
+
+* El servidor responde con una redirección a una ruta específica.
+* El navegador realiza una nueva solicitud GET a esa ruta.
+* Si el usuario refresca la página, solo recarga la página actual (la ruta redirigida), sin reenviar los datos del formulario.
+* **Patrón PRG (Post/Redirect/Get)**: Este es un patrón de diseño que ayuda a evitar el reenvío de formularios al separar la solicitud POST del usuario y la página que ve después.
+
+Por otro lado:
+
+* **`with('success', 'Mensaje')`**:
+  * Permite pasar datos de la sesión de una solicitud a otra.
+  * En la vista, podemos acceder a estos mensajes utilizando `session('success')`.
+* **Beneficio**: Podemos informar al usuario sobre el resultado de su acción sin exponer datos sensibles.
+
 ### Denominación de los métodos de los controladores que manejan los diferentes tipos de rutas
 
 Laravel adopta una convención de nomenclatura para los métodos de los controladores que manejan las diferentes rutas, especialmente cuando se utiliza el enrutamiento de recursos. Esta convención es parte de lo que hace a Laravel tan atractivo, ya que proporciona una estructura clara y consistente para el desarrollo de aplicaciones.
