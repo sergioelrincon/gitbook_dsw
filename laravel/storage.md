@@ -62,58 +62,14 @@ En Laravel, cuando necesitamos almacenar archivos en el sistema de archivos del 
 
       Esto dará como resultado la ruta completa al archivo `doubts.csv` dentro del subdirectorio `app` del directorio `storage`.
 
-***
+#### **¿Por qué usar `storage_path()`?**
 
-#### **¿Por Qué Usar `storage_path()`?**
-
-1. **Portabilidad y Flexibilidad**:
-   * **Independencia del Sistema Operativo**:
-     * Las rutas de archivos pueden variar entre sistemas operativos (Windows, Linux, macOS).
-     * `storage_path()` garantiza que obtienes una ruta correcta independientemente del sistema donde se ejecute la aplicación.
-   * **Cambios en la Estructura de Directorios**:
-     * Si la estructura del proyecto cambia o si se configura una ruta de almacenamiento personalizada, `storage_path()` siempre apuntará al directorio correcto.
-2. **Organización y Convenciones de Laravel**:
-   * **Separación de Responsabilidades**:
-     * Laravel organiza los archivos de la aplicación en directorios específicos para mantener una estructura clara.
-     * El directorio `storage` está destinado a archivos generados por la aplicación, como logs, cachés y archivos subidos.
-   * **Buenas Prácticas**:
-     * Almacenar archivos en `storage` sigue las convenciones de Laravel y facilita el mantenimiento y comprensión del código.
-3. **Seguridad**:
-   * **Protección de Archivos**:
-     * Los archivos en el directorio `storage` no son accesibles directamente desde el navegador.
-     * Esto previene que usuarios no autorizados accedan a archivos sensibles.
-   * **Gestión de Accesos**:
-     * Puedes controlar qué archivos son públicos y cuáles son privados.
-4. **Facilidad de Acceso en Diferentes Entornos**:
-   * **Ambientes de Desarrollo y Producción**:
-     * La ubicación física del directorio `storage` puede variar entre entornos.
-     * `storage_path()` se ajusta automáticamente según la configuración del entorno, evitando problemas de rutas incorrectas.
-
-***
-
-#### **Alternativas y por qué `storage_path()` es preferible**
-
-* **Usar rutas absolutas o relativas manualmente**:
-  *   Podrías escribir manualmente la ruta al archivo, por ejemplo:
-
-      ```php
-      $filePath = '/var/www/html/mi_aplicacion/storage/app/doubts.csv';
-      ```
-  * **Desventajas**:
-    * **No portátil**: Si mueves la aplicación a otro servidor o cambias el directorio raíz, la ruta deja de ser válida.
-    * **Mantenimiento**: Tendrías que actualizar manualmente las rutas en múltiples lugares si cambian.
-* **Usar `base_path()`**:
-  * Devuelve la ruta al directorio raíz de la aplicación.
-  *   Podrías construir la ruta así:
-
-      ```php
-      $filePath = base_path('storage/app/doubts.csv');
-      ```
-  * **Desventaja**:
-    * Aunque funciona, `storage_path()` es más específico y semánticamente claro para acceder al directorio `storage`.
-* **Usar `public_path()`**:
-  * Devuelve la ruta al directorio `public`.
-  * No es recomendable para archivos que no deben ser accesibles públicamente.
+* Las rutas de archivos pueden variar entre sistemas operativos (Windows, Linux, macOS). `storage_path()` garantiza que obtienes una ruta correcta independientemente del sistema donde se ejecute la aplicación.
+* Si la estructura del proyecto cambia o si se configura una ruta de almacenamiento personalizada, `storage_path()` siempre apuntará al directorio correcto.
+* Laravel organiza los archivos de la aplicación en directorios específicos para mantener una estructura clara.
+* El directorio `storage` está destinado a archivos generados por la aplicación, como logs, cachés y archivos subidos.
+* Almacenar archivos en `storage` sigue las convenciones de Laravel y facilita el mantenimiento y comprensión del código.
+* Los archivos en el directorio `storage` no son accesibles directamente desde el navegador
 
 ***
 
@@ -135,34 +91,10 @@ fputcsv($file, $data, ';', '"');
 fclose($file);
 ```
 
-* **Lo que Hace `storage_path('app/doubts.csv')`**:
+* **Lo que hace `storage_path('app/doubts.csv')`**:
   * Si tu aplicación está en `/var/www/html/mi_aplicacion`, entonces:
     * `storage_path()` devuelve `/var/www/html/mi_aplicacion/storage`.
     * Al pasar `'app/doubts.csv'`, obtienes `/var/www/html/mi_aplicacion/storage/app/doubts.csv`.
   * Esta ruta apunta al archivo `doubts.csv` dentro del directorio `storage/app`.
 
-***
-
-#### **Beneficios concretos en tu aplicación**
-
-1. **Mantenibilidad**:
-   * Si en el futuro decides cambiar la ubicación de los archivos de almacenamiento (por ejemplo, a un disco diferente o un servicio en la nube), puedes hacerlo modificando la configuración de Laravel sin cambiar el código que utiliza `storage_path()`.
-2. **Compatibilidad con herramientas de Laravel**:
-   * **Comandos artisan**:
-     * Algunos comandos, como `php artisan storage:link`, crean enlaces simbólicos entre `storage/app/public` y `public/storage`, facilitando el acceso a archivos públicos.
-   * **Sistemas de archivos**:
-     * Laravel proporciona una abstracción para el sistema de archivos (Filesystem) que puede interactuar con diferentes drivers (local, s3, ftp, etc.), y `storage_path()` es coherente con este sistema.
-3. **Evitar errores**:
-   * Usar rutas absolutas o relativas manualmente puede llevar a errores difíciles de depurar si la ruta es incorrecta.
-   * `storage_path()` reduce este riesgo al construir la ruta correctamente.
-
-***
-
-#### **Consideraciones Adicionales**
-
-* **Permisos de Directorio**:
-  * Asegúrate de que el directorio `storage` tiene los permisos adecuados para que la aplicación pueda leer y escribir archivos.
-* **Acceso a archivos**:
-  * Si necesitas acceder a los archivos almacenados desde el navegador (por ejemplo, para descargar un archivo), deberías manejarlo a través de rutas y controladores que controlen el acceso, en lugar de exponer directamente el directorio `storage`.
-* **Uso de Almacenamiento Personalizado**:
-  * Si en el futuro utilizas sistemas de almacenamiento como Amazon S3 o Google Cloud Storage, Laravel facilita la integración y `storage_path()` sigue siendo coherente con estas implementaciones.
+####
