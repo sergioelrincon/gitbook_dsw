@@ -71,6 +71,17 @@ En Laravel, cuando necesitamos almacenar archivos en el sistema de archivos del 
 * Almacenar archivos en `storage` sigue las convenciones de Laravel y facilita el mantenimiento y comprensión del código.
 * Los archivos en el directorio `storage` no son accesibles directamente desde el navegador
 
+#### Subdirectorios del storage\_path
+
+El directorio `storage/` en Laravel está diseñado para almacenar y organizar diferentes tipos de archivos generados por la aplicación. Dentro de `storage/`, Laravel define varios subdirectorios con propósitos específicos:
+
+* **`storage/app/`**: Almacena archivos generados por la aplicación que no necesitan ser accesibles públicamente.&#x20;
+* **`storage/app/public/`**: Contiene archivos que deben ser accesibles públicamente. Se suele crear un enlace simbólico a este directorio desde `public/storage` mediante el comando `php artisan storage:link`.
+* **`storage/framework/`**: Utilizado por el framework para almacenar archivos de caché, sesiones y vistas compiladas.
+* **`storage/logs/`**: Almacena los archivos de registro (logs) de la aplicación.
+
+Nota: No es recomendable alojar archivos directamente en storage/, dado que se mezclan con otros subdirectorios críticos para el funcionamiento de Laravel, lo que puede causar confusión y dificultar el mantenimiento.
+
 ***
 
 #### **Ejemplo práctico**
