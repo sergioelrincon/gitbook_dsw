@@ -77,7 +77,6 @@ De esta forma:
 * El servidor responde con una redirección a una ruta específica.
 * El navegador realiza una nueva solicitud GET a esa ruta.
 * Si el usuario refresca la página, solo recarga la página actual (la ruta redirigida), sin reenviar los datos del formulario.
-* **Patrón PRG (Post/Redirect/Get)**: Este es un patrón de diseño que ayuda a evitar el reenvío de formularios al separar la solicitud POST del usuario y la página que ve después.
 
 Por otro lado:
 
@@ -85,6 +84,30 @@ Por otro lado:
   * Permite pasar datos de la sesión de una solicitud a otra.
   * En la vista, podemos acceder a estos mensajes utilizando `session('success')`.
 * **Beneficio**: Podemos informar al usuario sobre el resultado de su acción sin exponer datos sensibles.
+
+**Este patrón de funcionamiento se denomina patrón PRG (Post/Redirect/Get)**
+
+El patrón **PRG** (Post/Redirect/Get) es un patrón de diseño en desarrollo web que se utiliza para mejorar la experiencia del usuario y prevenir problemas como la duplicación de envíos de formularios. Este patrón es especialmente útil para evitar que, al actualizar una página después de enviar un formulario, el navegador vuelva a enviar los datos, lo que podría causar acciones no deseadas como transacciones duplicadas.
+
+¿Cómo funciona el patrón PRG?
+
+1. **Post (Enviar):** El usuario completa un formulario en una página web y lo envía. Esto genera una solicitud HTTP **POST** al servidor con los datos ingresados.
+2. **Redirect (Redireccionar):** Después de procesar la solicitud, en lugar de responder directamente con una página web, el servidor envía una respuesta HTTP **302** (Found) o **303** (See Other) que indica al navegador que debe redirigir a una nueva URL.
+3. **Get (Obtener):** El navegador sigue la redirección y realiza una solicitud HTTP **GET** a la nueva URL. El servidor responde con la página resultante que se muestra al usuario.
+
+Beneficios del patrón PRG:
+
+* **Prevención de duplicados:** Evita que, al refrescar la página, el navegador vuelva a enviar el formulario, lo que podría causar acciones duplicadas.
+* **Mejora de la usabilidad:** Proporciona URLs únicas para cada estado de la aplicación, lo que facilita la navegación y el uso de botones de atrás y adelante.
+* **Mejora de la seguridad:** Reduce el riesgo de reenvíos no intencionados de datos sensibles o transacciones críticas.
+
+Ejemplo práctico:
+
+Imagina que estás realizando una compra en línea:
+
+* Al confirmar la compra (POST), el servidor procesa el pago.
+* En lugar de mostrar directamente la confirmación, el servidor redirige a una página de confirmación de pedido (Redirect).
+* El navegador carga la página de confirmación (GET), mostrando los detalles del pedido sin riesgo de volver a procesar el pago si se actualiza la página.
 
 ### Validación de datos de formularios
 
