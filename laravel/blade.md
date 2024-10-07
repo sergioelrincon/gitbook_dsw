@@ -112,7 +112,11 @@ Las dobles llaves `{{ ... }}` se utilizan para **imprimir el valor de una variab
 
 ### Helpers
 
-Los _helpers_ son funciones que se pueden usar dentro de los scripts de Laravel. Para invocar a _helpers_ en una vista, hay que incluirlos entre dobles llaves.
+Los **helpers** en Laravel son funciones globales de PHP que están disponibles en cualquier parte de la aplicación. Estas funciones proporcionan soluciones rápidas y convenientes para tareas comunes, lo que facilita el desarrollo al reducir la cantidad de código que necesitas escribir.
+
+Los helpers te permiten realizar operaciones frecuentes de forma sencilla, sin tener que instanciar clases o importar namespaces. Laravel incluye una variedad de helpers por defecto
+
+Para invocar a _helpers_ en una vista, tenemos que incluirlos entre dobles llaves.
 
 Por ejemplo,
 
