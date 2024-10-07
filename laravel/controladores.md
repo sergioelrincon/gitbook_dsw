@@ -86,6 +86,73 @@ Por otro lado:
   * En la vista, podemos acceder a estos mensajes utilizando `session('success')`.
 * **Beneficio**: Podemos informar al usuario sobre el resultado de su acción sin exponer datos sensibles.
 
+### Validación de datos de formularios
+
+Cuando utilizamos el método `$request->validate()` en un controlador para validar los datos de una solicitud, Laravel verifica los datos según las reglas proporcionadas.
+
+```php
+   public function submitForm(Request $request)
+   {
+       $validatedData = $request->validate([
+           'email' => 'required|email',
+           'module' => 'required',
+           // otras reglas...
+       ]);
+
+       // Si la validación falla, Laravel redirige automáticamente y pasa los errores
+   }
+```
+
+Si la validación falla, Laravel automáticamente redirige al usuario de vuelta a la página anterior (normalmente el formulario) y **almacena los errores en la sesión**.
+
+La variable `$errors` se comparte automáticamente con todas las vistas. Esto significa que en cualquier vista renderizada después de una validación fallida, `$errors` estará disponible para mostrar los mensajes de error.
+
+En las plantillas Blade, puedes utilizar la variable `$errors` para mostrar mensajes de error al usuario. Aquí hay algunas formas comunes de hacerlo:
+
+1.  **Verificar si hay errores**:
+
+    ```blade
+    @if ($errors->any())
+        <div style="color: red;">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    ```
+
+    * **$errors->any()**: Verifica si hay algún error.
+    * **$errors->all()**: Devuelve todos los mensajes de error en un array.
+2.  **Mostrar mensajes de error por campo**:
+
+    Si deseas mostrar mensajes de error específicos junto a cada campo del formulario:
+
+    ```blade
+    <label for="email">Correo:</label><br>
+    <input type="email" id="email" name="email" value="{{ old('email') }}"><br>
+    @if ($errors->has('email'))
+        <span style="color: red;">{{ $errors->first('email') }}</span><br>
+    @endif
+    ```
+
+    * **$errors->has('email')**: Comprueba si hay errores para el campo 'email'.
+    *   **$errors->first('email')**: Obtiene el primer mensaje de error para 'email'. Un solo campo puede tener varios mensajes de error asociados si no cumple con múltiples reglas de validación. Cuando defines reglas de validación para un campo, puedes especificar varias reglas que el campo debe cumplir.  Si deseas mostrar **todos los mensajes de error** para un campo, puedes usar `$errors->get('campo')`, que devuelve un array con todos los mensajes.
+
+        **Ejemplo**:
+
+        ```blade
+        @if ($errors->has('email'))
+            <ul>
+                @foreach ($errors->get('email') as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
+        ```
+    * **$errors->old('email'):** Para que los usuarios no tengan que volver a ingresar todos los datos en caso de error, puedes utilizar la función `old()` en los campos del formulario
+
 ### Denominación de los métodos de los controladores que manejan los diferentes tipos de rutas
 
 Laravel adopta una convención de nomenclatura para los métodos de los controladores que manejan las diferentes rutas, especialmente cuando se utiliza el enrutamiento de recursos. Esta convención es parte de lo que hace a Laravel tan atractivo, ya que proporciona una estructura clara y consistente para el desarrollo de aplicaciones.
