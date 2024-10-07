@@ -98,9 +98,21 @@ Permiten mostrar código en las vistas en función de si el usuario está o no a
 @endguest
 ```
 
+### Dobles llaves \{{...\}}
+
+Blade ofrece una sintaxis sencilla y potente para combinar código PHP con HTML de forma elegante y limpia. Uno de los elementos clave de Blade son las dobles llaves `{{ ... }}`, que se utilizan para mostrar datos en las vistas.
+
+Las dobles llaves `{{ ... }}` se utilizan para **imprimir el valor de una variable o una expresión** en la vista. Al hacerlo, Blade aplica automáticamente **escape de entidades HTML** para proteger contra ataques XSS (Cross-Site Scripting), asegurando que el contenido mostrado es seguro.
+
+**Sintaxis básica:**
+
+```blade
+{{ $variable }}
+```
+
 ### Helpers
 
-Los helpers son funciones que se pueden usar dentro de los scripts de Laravel. Para invocar a helpers hay que incluirlos entre \{{ y \}}.
+Los _helpers_ son funciones que se pueden usar dentro de los scripts de Laravel. Para invocar a _helpers_ en una vista, hay que incluirlos entre dobles llaves.
 
 Por ejemplo,
 
