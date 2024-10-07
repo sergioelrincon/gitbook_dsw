@@ -118,6 +118,6 @@ Puedes encontrar más información sobre helpers en [https://laravel.com/docs/10
 
 #### Variable $errors
 
-Laravel proporciona una variable $errors que está disponible en todas las vistas. Permite acceder a los errores generados por la aplicación.
+Laravel proporciona una variable $errors que está disponible en todas las vistas. Esta variable contiene los mensajes de error generados durante la validación de datos en una solicitud HTTP, generalmente al procesar formularios. Esto permite que los desarrolladores muestren mensajes de error específicos a los usuarios, indicando qué campos no cumplieron con las reglas de validación.
 
 Mediante el método $errors->any() se puede consultar si existe algún error, y en caso afirmativo, se pueden recorrer todos los errores mendiante el método $errors->all(), que devuelve un array con los mensajes de cada uno de los errores, [tal y como se explica en la documentación oficial](https://laravel.com/docs/10.x/validation#quick-displaying-the-validation-errors).
