@@ -176,6 +176,8 @@ En las plantillas Blade, puedes utilizar la variable `$errors` para mostrar mens
         ```
     * **$errors->old('email'):** Para que los usuarios no tengan que volver a ingresar todos los datos en caso de error, puedes utilizar la función `old()` en los campos del formulario
 
+Puedes consultar las reglas de validación que puedes utilizar [en la web oficial de Laravel.](https://laravel.com/docs/11.x/validation#rule-regex)
+
 ### Denominación de los métodos de los controladores que manejan los diferentes tipos de rutas
 
 Laravel adopta una convención de nomenclatura para los métodos de los controladores que manejan las diferentes rutas, especialmente cuando se utiliza el enrutamiento de recursos. Esta convención es parte de lo que hace a Laravel tan atractivo, ya que proporciona una estructura clara y consistente para el desarrollo de aplicaciones.
