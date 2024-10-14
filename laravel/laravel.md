@@ -72,6 +72,22 @@ Por defecto, al crear un proyecto Laravel, se genera un fichero ".gitignore" que
 
 Te recomiendo instalar "Laravel Blade Snippets", "Laravel Snippets", "Laravel goto view" y "Laravel Extra Intellisense".&#x20;
 
+## Log
+
+En Laravel, los logs de errores y eventos se almacenan en la carpeta `storage/logs`. El archivo más común donde se registran los errores es el archivo `laravel.log`, que se encuentra en:
+
+```
+/storage/logs/laravel.log
+```
+
+Si ocurre algún error durante la ejecución de tu proyecto, puedes revisar este archivo para obtener detalles sobre el problema. Laravel utiliza el componente Monolog para gestionar los logs, por lo que puedes personalizar la configuración de logging en el archivo de configuración ubicado en:
+
+```
+/config/logging.php
+```
+
+Ahí puedes ajustar el tipo de logging, el formato y otros detalles si necesitas más control sobre cómo se registran los errores.
+
 ## Varios
 
 * `\{\{ \}\}`: Lo podemos encontrar en ficheros Blade. Procesa lo que está en el interior como código PHP, para mostrar el resultado. Es como hacer un echo. Por ejemplo, `{{1+1}}` mostraría 2. También se utilizan para invocar helpers. Y para mostrar información pasada a la vista.
