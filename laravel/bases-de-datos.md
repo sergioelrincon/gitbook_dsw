@@ -139,7 +139,7 @@ Un **seeder** en Laravel es una clase que se utiliza para poblar la base de dato
     ```bash
     php artisan db:seed
     ```
-4.  **Uso de Factories**: Laravel también ofrece una manera más avanzada de poblar la base de datos mediante el uso de **factories**. Los factories permiten generar datos aleatorios para poblar la base de datos con ejemplos de registros. Puedes combinarlos con los seeders para generar múltiples registros de manera automática y con datos variados. Un ejemplo sería:
+4.  **OPCIONAL: Uso de Factories**: Laravel también ofrece una manera más avanzada de poblar la base de datos mediante el uso de **factories**. Los factories permiten generar datos aleatorios para poblar la base de datos con ejemplos de registros. Puedes usarlos en los seeders para generar múltiples registros de manera automática y con datos variados. Un ejemplo sería:
 
     ```php
     public function run()
@@ -148,7 +148,23 @@ Un **seeder** en Laravel es una clase que se utiliza para poblar la base de dato
     }
     ```
 
-    Este código creará 10 usuarios aleatorios usando el factory del modelo `User`. Por lo tanto, es fundamental crear previamente el modelo antes de utilizar los Factories.
+    Este código creará 10 usuarios aleatorios usando el factory del modelo `User`. Por lo tanto, es fundamental crear previamente el modelo antes de utilizar los Factories.\
+    También es necesario crear la Factory con el siguiente comando:\
+    \
+    `php artisan make:factory DoubtFactory --model=Doubt`\
+    \
+    En el método definition() deberías incluir algo como esto:
+
+```
+    return [
+        'email' => $this->faker->unique()->safeEmail,
+        'module' => $this->faker->word, // Genera una palabra
+        'subject' => $this->faker->sentence(6),  // Genera un título o asunto de la duda
+        'description' => $this->faker->paragraph(3),  // Genera un texto para la descripción de la duda
+        'created_at' => now(),
+        'updated_at' => now(),
+    ];
+```
 
 #### Resumen del flujo de trabajo:
 
