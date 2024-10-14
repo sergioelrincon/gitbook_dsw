@@ -89,3 +89,73 @@ En este caso, en el método up() crearemos el nuevo campo siguiendo la misma sin
 
 Podemos encontrar la documentación oficial sobre las modificaciones de campos en el [siguiente enlace](https://laravel.com/docs/10.x/migrations#column-modifiers).
 
+### Seeders
+
+Un **seeder** en Laravel es una clase que se utiliza para poblar la base de datos con datos iniciales o de prueba. Es particularmente útil cuando estás desarrollando una aplicación y necesitas un conjunto de datos consistente para probar funcionalidades sin tener que ingresar manualmente la información cada vez.
+
+#### ¿Cómo funcionan los seeders en Laravel?
+
+1.  **Creación de seeders**: Los seeders se crean utilizando el comando Artisan de Laravel. Un seeder es básicamente una clase que tiene un método `run()` en el que defines qué datos quieres insertar en la base de datos.
+
+    Para crear un seeder, usas el siguiente comando:
+
+    ```bash
+    php artisan make:seeder NombreDelSeeder
+    ```
+
+    Esto creará un archivo en la carpeta `database/seeders`.
+2.  **Definición de datos**: Dentro del método `run()` del seeder, puedes usar los métodos de los modelos de Laravel, como `DB::table()` o el uso de los modelos directamente, para insertar los datos en la base de datos. Un ejemplo sencillo de un seeder sería:
+
+    ```php
+    <?php
+
+    namespace Database\Seeders;
+
+    use Illuminate\Database\Seeder;
+    use Illuminate\Support\Facades\DB;
+
+    class UsersTableSeeder extends Seeder
+    {
+        public function run()
+        {
+            DB::table('users')->insert([
+                'name' => 'John Doe',
+                'email' => 'johndoe@example.com',
+                'password' => bcrypt('password'),
+            ]);
+        }
+    }
+    ```
+
+    En este ejemplo, el seeder está insertando un usuario en la tabla `users`.
+3.  **Ejecución de seeders**: Una vez que hayas creado y configurado tu seeder, puedes ejecutarlo usando el siguiente comando:
+
+    ```bash
+    php artisan db:seed --class=UsersTableSeeder
+    ```
+
+    También puedes ejecutar todos los seeders a la vez (si has configurado varios en el archivo `DatabaseSeeder`):
+
+    ```bash
+    php artisan db:seed
+    ```
+4.  **Uso de Factories**: Laravel también ofrece una manera más avanzada de poblar la base de datos mediante el uso de **factories**. Los factories permiten generar datos aleatorios para poblar la base de datos con ejemplos de registros. Puedes combinarlos con los seeders para generar múltiples registros de manera automática y con datos variados. Un ejemplo sería:
+
+    ```php
+    public function run()
+    {
+        \App\Models\User::factory(10)->create();
+    }
+    ```
+
+    Este código creará 10 usuarios aleatorios usando el factory del modelo `User`.
+
+#### Resumen del flujo de trabajo:
+
+1. Creas un seeder con `php artisan make:seeder`.
+2. Definir los datos que quieres insertar en el método `run()`.
+3. Ejecutas el seeder con `php artisan db:seed` o `php artisan db:seed --class=NombreDelSeeder`.
+4. Opcionalmente, puedes combinar seeders con factories para generar datos de prueba automáticamente.
+
+
+
