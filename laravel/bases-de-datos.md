@@ -148,7 +148,7 @@ Un **seeder** en Laravel es una clase que se utiliza para poblar la base de dato
     }
     ```
 
-    Este código creará 10 usuarios aleatorios usando el factory del modelo `User`.
+    Este código creará 10 usuarios aleatorios usando el factory del modelo `User`. Por lo tanto, es fundamental crear previamente el modelo antes de utilizar los Factories.
 
 #### Resumen del flujo de trabajo:
 
