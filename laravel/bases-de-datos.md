@@ -112,17 +112,24 @@ Un **seeder** en Laravel es una clase que se utiliza para poblar la base de dato
     namespace Database\Seeders;
 
     use Illuminate\Database\Seeder;
-    use Illuminate\Support\Facades\DB;
+    use App\Models\Message;
 
     class UsersTableSeeder extends Seeder
     {
         public function run()
         {
-            DB::table('users')->insert([
-                'name' => 'John Doe',
-                'email' => 'johndoe@example.com',
-                'password' => bcrypt('password'),
-            ]);
+            $messages = [
+                [
+                    "text" => "Primer mensaje",
+                ],
+                [
+                    "text" => "Segundo mensaje",
+                ],
+            ];
+
+            foreach ($messages as $message) {
+                Message::create($message);
+            }
         }
     }
     ```
