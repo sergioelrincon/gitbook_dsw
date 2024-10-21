@@ -1,63 +1,63 @@
 # Autenticación
 
-Las versiones actuales de Laravel permiten usar varios [subsistemas de autenticación](https://laravel.com/docs/10.x/starter-kits). Podemos optar por instalar uno de ellos, pero en nuestro caso utilizaremos _laravel/ui_, ya que es bastante sencillo de instalar y utilizar.
+Para implementar la autenticación de usuarios en Laravel, puedes aprovechar el sistema de autenticación que Laravel proporciona de forma predeterminada. Para ello tendrás que seguir los siguientes pasos:
 
-La instalación de _laravel/ui_ se realiza a través del siguiente comando:
+#### 1. **Instalar Laravel Breeze (para autenticación básica)**
 
-```
-composer require laravel/ui
-```
+Laravel Breeze es un paquete ligero para la autenticación de usuarios, y es la opción recomendada para empezar. Aquí te explico cómo usar Breeze:
 
-Este comando instala las librerías necesarias en la carpeta "vendor". Sin embargo, también necesitamos generar la interfaz de usuario de inicio de sesión y registro de usuarios con Bootstrap . Para ello tendremos que ejecutar el comando que se muestra a continuación, **teniendo en cuenta** que debemos responder que "no" cuando nos pregunte si queremos sobreescribir los ficheros "app.blade.php" y "HomeController.php".
+**Paso 1: Instalar Breeze**
 
-```
-php artisan ui bootstrap --auth
-```
+Primero, asegúrate de tener instalado el paquete Breeze. Puedes agregarlo a tu proyecto ejecutando:
 
-La ejecución del comando anterior generará los siguientes cambios:
-
-* Se creará la carpeta "app/Http/Controllers/Auth" que incluye nuevos controladores, como LoginController y RegisterContrroller.
-* Se creará la carpeta "resources/views/auth" que incluye algunas vistas, como la de login y la de registro de usuario.
-* Se modificará el fichero "routes/web.php" para incluir la ruta /home y varias rutas de autenticación.
-
-Posteriormente tendremos que modificar lo siguiente:
-
-* Eliminar la siguiente línea del fichero "web.php", ya que nuestra aplicación no tiene la ruta "/home": ~~Route::get('/home', \[App/Http/Controllers/HomeController::class, 'index'])->name('home');~~
-* Cambiar la constante "HOME" del fichero "app/Providers/RouteServiceProvider.php" para que apunte a nuestra ruta principal. Este valor lo utiliza Laravel para redirigir al usuario después de validarse.
-
-### Laravel Middleware
-
-Laravel Middleware nos permite innpeccionar y filtrar peticiones HTTP de acceso a nuestra aplicación para establecer restricciones y así controlar el acceso a determinadas rutas. Por ejemplo, impidiendo acceder a un usuario básico  al panel de control de nuestra aplicación y redirigiéndolo a la página principal o a una pantalla de error.
-
-Para crear un nuevo middleware, tenemos que ejecutar lo siguiente:
-
-```
-php artisan make:middleware AdminAuthMiddleware
+```bash
+composer require laravel/breeze --dev
 ```
 
-El nuevo middleware se creará en "app/Http/Middleware" varias clases que, mediante el método "handle", nos permitirá establecer las restricciones de acceso en función del perfil de usuario. Por ejemplo, en "AdminAuthMiddleware.php" podemos implementar en el método "handle" un código similar a éste para permitir el acceso solo a los usuarios con perfil "admin" :
+**Paso 2: Ejecutar la instalación de Breeze**
 
-```
-use Illuminate\Support\Facades\Auth;
-...
-if (Auth::user() && Auth::user()->getRole() == 'admin') {  
-    return $next($request);  
-} else {  
-    return redirect()->route('error.user');  
-}
+Después de instalar el paquete, debes generar los archivos de autenticación y vistas básicas ejecutando:
+
+```bash
+php artisan breeze:install
 ```
 
-De esta forma, se permite al usuario acceder a la ruta solo si su rol es "admi" y en caso contrario se la redirije a una página de error.
+Esto te configurará las rutas, controladores y vistas necesarias para registro, inicio de sesión, y manejo de usuarios.
 
-En nuestro fichero "web.php" debemos  conectar el middleware anterior con la ruta correspondiente , incluyendo el siguiente código asociado a las rutas que deseemos:
+**Paso 3: Ejecutar las migraciones**
 
+El sistema de autenticación de Laravel utiliza una tabla de usuarios. Para crear esta tabla, ejecuta las migraciones. Si ya las has ejecutado anteriormente (como probablemente será nuestro caso), posiblemente no se ejecute ninguna migración:
+
+```bash
+php artisan migrate
 ```
-Route::middleware('admin')->group(function () {
-    Route::get('/admin', 'App\Http\Controllers\Admin\AdminHomeController@index')->name("admin.pub.index");
-    ...
-});
+
+**Paso 4: Iniciar el servidor**
+
+Con eso hecho, puedes iniciar el servidor de Laravel:
+
+```bash
+php artisan serve
 ```
 
-Además, también tendremos que  editar el fichero  "app/Http/Kernel.php"  para asociar el rol con el cotrolador correspondiente.Para ello añadimos  la línea siguiente al array $routeMiddleware:
+#### 2. **Configurar rutas protegidas**
 
-&#x20;`'admin' => \App\Http\Middleware\AdminAuthMiddleware::class,`
+Una vez que tengas el sistema de autenticación configurado, puedes proteger rutas específicas para que solo usuarios autenticados puedan acceder a ellas.
+
+Por ejemplo, si tienes una ruta a la que solo quieres que accedan usuarios autenticados, puedes usar el middleware `auth` en tus rutas de la siguiente manera:
+
+```php
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware('auth');
+```
+
+Esto garantiza que solo los usuarios autenticados puedan acceder a `/dashboard`. Si un usuario no autenticado intenta acceder a esta ruta, será redirigido automáticamente a la página de inicio de sesión.
+
+#### 3. **Personalizar el sistema de autenticación**
+
+Si necesitas personalizar la autenticación (por ejemplo, agregar nuevos campos al registro de usuario o personalizar el flujo de autenticación), puedes modificar los controladores generados por Breeze que están en `app/Http/Controllers/Auth`.
+
+También puedes modificar las vistas que Breeze genera, las cuales se encuentran en `resources/views/auth`.
+
+####
