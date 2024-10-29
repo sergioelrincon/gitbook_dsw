@@ -42,7 +42,8 @@
 * [Bases de datos](laravel/bases-de-datos.md)
 * [Modelos](laravel/modelos.md)
 * [Storage](laravel/storage.md)
-* [Autenticación](laravel/autenticacion.md)
+* [Laravel Breeze](laravel/autenticacion.md)
+* [Laravel Jetstream](laravel/laravel-jetstream.md)
 
 ## Servicios web
 
