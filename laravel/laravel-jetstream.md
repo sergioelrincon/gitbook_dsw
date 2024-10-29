@@ -1,6 +1,6 @@
 # Laravel Jetstream
 
-**1. Introducción a Laravel Jetstream**
+**Introducción a Laravel Jetstream**
 
 Laravel Jetstream es un conjunto de herramientas y funcionalidades avanzadas que Laravel nos ofrece para implementar un sistema de autenticación completo en nuestras aplicaciones. Con Jetstream, podemos:
 
@@ -15,7 +15,7 @@ Jetstream se construye sobre **Laravel Fortify**, que proporciona las rutas y fu
 
 ***
 
-**2. Laravel Jetstream y Livewire**
+**Laravel Jetstream y Livewire**
 
 Cuando instalamos Laravel Jetstream, podemos elegir entre dos opciones para la interfaz: **Livewire** o **Inertia.js**. Para esta actividad, trabajaremos con **Livewire**, que utiliza el motor de plantillas **Blade** (que ya conocemos) para permitir una interfaz dinámica sin necesidad de JavaScript adicional.
 
@@ -23,7 +23,7 @@ Livewire nos permite hacer que las páginas se actualicen en tiempo real sin ten
 
 ***
 
-**3. Instalación de Laravel Jetstream**
+**Instalación de Laravel Jetstream**
 
 Para instalar Laravel Jetstream en un proyecto Laravel existente, sigue estos pasos:
 
@@ -52,7 +52,7 @@ Para instalar Laravel Jetstream en un proyecto Laravel existente, sigue estos pa
 
 ***
 
-**4. Archivos y carpetas importantes**
+**Archivos y carpetas importantes**
 
 Después de instalar Jetstream, aquí tienes algunos archivos y carpetas importantes en los que trabajarás:
 
@@ -62,7 +62,7 @@ Después de instalar Jetstream, aquí tienes algunos archivos y carpetas importa
 
 ***
 
-**5. Comando `route:list` y las rutas de Fortify**
+**Comando `route:list` y las rutas de Fortify**
 
 Laravel Fortify registra automáticamente las rutas para la autenticación. Puedes ver todas las rutas disponibles en tu proyecto usando el siguiente comando en la terminal:
 
@@ -74,7 +74,7 @@ Este comando muestra una lista de todas las rutas en la aplicación, incluyendo 
 
 ***
 
-**6. Personalización del perfil de usuario**
+**Personalización del perfil de usuario**
 
 Jetstream permite añadir campos adicionales a los perfiles de usuario. Para agregar un campo, sigue estos pasos:
 
@@ -113,7 +113,7 @@ Jetstream permite añadir campos adicionales a los perfiles de usuario. Para agr
 
 ***
 
-**7. Gestión de sesiones activas**
+**Gestión de sesiones activas**
 
 Jetstream permite que los usuarios administren sus sesiones activas. Esto significa que un usuario puede ver en qué dispositivos o navegadores ha iniciado sesión y cerrar sesión en otros dispositivos si lo desea. Para usar esta funcionalidad:
 
@@ -122,7 +122,7 @@ Jetstream permite que los usuarios administren sus sesiones activas. Esto signif
 
 ***
 
-**8. Autenticación de dos factores**&#x20;
+**Autenticación de dos factores**&#x20;
 
 Para mejorar la seguridad, puedes habilitar la autenticación de dos factores (2FA) en Jetstream. Esto permite a los usuarios configurar un segundo factor de autenticación (como un código desde una app de autenticación).
 
