@@ -43,7 +43,9 @@
 * [Modelos](laravel/modelos.md)
 * [Storage](laravel/storage.md)
 * [Laravel Breeze](laravel/autenticacion.md)
-* [Laravel Jetstream](laravel/laravel-jetstream.md)
+* [Laravel Jetstream](laravel/laravel-jetstream/README.md)
+  * [Guard de autenticación](laravel/laravel-jetstream/guard-de-autenticacion.md)
+  * [Compilación de activos](laravel/laravel-jetstream/compilacion-de-activos.md)
 
 ## Servicios web
 

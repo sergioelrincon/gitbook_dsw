@@ -11,7 +11,15 @@ Laravel Jetstream es un conjunto de herramientas y funcionalidades avanzadas que
 
 Jetstream se construye sobre **Laravel Fortify**, que proporciona las rutas y funcionalidades de autenticación. Jetstream utiliza estas funciones y añade una interfaz que se puede personalizar fácilmente para crear sistemas de autenticación robustos y listos para usarse.
 
-**¿Qué es Laravel Fortify?** Fortify es el sistema de autenticación "sin interfaz" de Laravel. Esto significa que gestiona toda la lógica de autenticación (iniciar sesión, registro, verificación, etc.) sin crear vistas o pantallas. En cambio, Jetstream se encarga de proporcionar estas vistas y las herramientas para que el usuario interactúe con la autenticación de Fortify.
+## **¿Qué es Laravel Fortify?**&#x20;
+
+Fortify es el sistema de autenticación "sin interfaz" de Laravel. Esto significa que gestiona toda la lógica de autenticación (iniciar sesión, registro, verificación, etc.) sin crear vistas o pantallas. En cambio, Jetstream se encarga de proporcionar estas vistas y las herramientas para que el usuario interactúe con la autenticación de Fortify.
+
+Internamente, las partes de autenticación de Jetstream son impulsadas por Laravel Fortify, que es un backend de autenticación independiente y sin interfaz gráfica para Laravel.
+
+Fortify registra las rutas y controladores necesarios para implementar todas las funciones de autenticación de Laravel, incluyendo inicio de sesión, registro, restablecimiento de contraseña, verificación de correo electrónico, y más. Después de instalar Fortify, puedes ejecutar el comando `route:list` de Artisan para ver las rutas que ha registrado.
+
+Dado que Fortify no proporciona su propia interfaz de usuario, está diseñado para emparejarse con una interfaz de usuario personalizada que realice solicitudes a las rutas que registra. Laravel Jetstream es nuestra implementación oficial de una interfaz de usuario construida sobre el backend de autenticación de Fortify.
 
 ***
 
@@ -56,7 +64,9 @@ Para instalar Laravel Jetstream en un proyecto Laravel existente, sigue estos pa
 
 Después de instalar Jetstream, aquí tienes algunos archivos y carpetas importantes en los que trabajarás:
 
-* **`config/fortify.php`**: Archivo de configuración donde puedes personalizar el comportamiento de Fortify, como las rutas de redirección tras la autenticación y el uso de autenticación en dos factores.
+*   **`config/fortify.php`**:  Cuando Jetstream se instala, se crea un archivo de configuración `config/fortify.php` en tu aplicación. Dentro de este archivo de configuración, puedes personalizar varios aspectos del comportamiento de Fortify, como el guard de autenticación que se debe usar, a dónde deben redirigirse los usuarios después de la autenticación, y más.
+
+    Dentro del archivo de configuración de Fortify, también puedes desactivar características completas de Fortify, como la capacidad de actualizar la información de perfil o las contraseñas.
 * **`resources/views`**: Carpeta donde Jetstream coloca las vistas para las páginas de autenticación y gestión de perfiles. Las vistas de Livewire están en **`resources/views`**. Por ejemplo, el diseño general se encuentra en `resources/views/layouts/app.blade.php`.
 * **`app/Actions`**: Carpeta donde se encuentran las clases de "Acción". Estas clases representan una acción específica (como crear un equipo o eliminar un usuario). Puedes personalizar estas clases para cambiar el comportamiento de Jetstream en el backend.
 
@@ -128,69 +138,3 @@ Para mejorar la seguridad, puedes habilitar la autenticación de dos factores (2
 
 1. Abre el archivo `config/fortify.php` y habilita la autenticación de dos factores configurando la opción `features` para incluir `Features::twoFactorAuthentication()`.
 2. En la sección de perfil de usuario, verás la opción para habilitar la autenticación de dos factores y se generarán códigos QR para configurarla en aplicaciones de autenticación.
-
-***
-
-***
-
-## Aclaraciones
-
-### **¿Por qué es necesario compilar los activos (CSS y JavaScript)?**
-
-En un proyecto Laravel, los "activos" son los recursos estáticos de la aplicación, como los archivos CSS y JavaScript, que hacen que la aplicación sea visualmente atractiva e interactiva. Laravel Jetstream usa **Tailwind CSS** (para el estilo) y **JavaScript** (para la interactividad en el navegador).
-
-Estos archivos de estilo y scripts se escriben inicialmente en un formato que es más fácil de desarrollar y organizar, pero necesitan "compilarse" para ser optimizados antes de usarlos en producción. La compilación realiza tareas como:
-
-* **Minimización**: Reduce el tamaño de los archivos, eliminando espacios en blanco y comentarios, lo cual mejora la velocidad de carga.
-* **Agrupación**: Combina múltiples archivos en uno solo, reduciendo el número de solicitudes al servidor.
-* **Traspilación**: Convierte código moderno a versiones compatibles con navegadores antiguos.
-
-### **¿Qué son los activos?**
-
-Los activos (o "assets" en inglés) son todos los recursos de frontend (CSS, JavaScript, imágenes, fuentes) que se envían al navegador para hacer que la aplicación funcione y se vea bien. Por ejemplo:
-
-* **CSS** para dar estilo a las páginas (colores, fuentes, diseños).
-* **JavaScript** para añadir funcionalidad dinámica e interactiva.
-* **Imágenes** y otros archivos multimedia que se muestran en la aplicación.
-
-### **¿Qué es npm y por qué se utiliza en este paso?**
-
-**npm** (Node Package Manager) es un administrador de paquetes para JavaScript. Se utiliza para instalar y gestionar dependencias de JavaScript y herramientas que ayudan en el desarrollo web.
-
-En Laravel, **npm** se usa para:
-
-* Instalar **Tailwind CSS** y otros paquetes de frontend.
-* Ejecutar comandos como `npm run dev` para compilar los archivos CSS y JavaScript.
-* Mantener los paquetes actualizados y bien organizados.
-
-Cuando ejecutas `npm install`, npm lee el archivo `package.json` (donde están listadas las dependencias del proyecto) y descarga todos los paquetes y herramientas necesarias.
-
-### **¿Deberías tener npm instalado?**
-
-Sí, es necesario tener npm instalado para poder compilar los activos de Jetstream. npm se instala automáticamente con **Node.js**, por lo que solo necesitas instalar Node.js.
-
-### **¿Cómo instalar npm (y Node.js) si no lo tienes?**
-
-Para instalar **Node.js** (y, con él, npm):
-
-1.  **Verifica si ya está instalado**: Abre la terminal y escribe:
-
-    ```bash
-    node -v
-    npm -v
-    ```
-
-    Si aparece un número de versión, ya lo tienes instalado.
-2. **Instala Node.js y npm**: Si no los tienes, sigue estos pasos:
-   *   **Linux (Debian/Ubuntu)**:
-
-       ```bash
-       sudo apt update
-       sudo apt install nodejs npm
-       ```
-   * **Windows** y **Mac**:
-     * Descarga el instalador de [Node.js desde su sitio oficial](https://nodejs.org).
-     * Ejecuta el instalador y sigue los pasos. Esto instalará tanto Node.js como npm.
-3. **Verifica la instalación** ejecutando `node -v` y `npm -v` nuevamente para asegurarte de que estén correctamente instalados.
-
-Con npm y Node.js instalados, puedes compilar los activos del proyecto con los comandos de npm, lo cual es esencial para ver los cambios en CSS y JavaScript en el navegador.
