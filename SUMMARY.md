@@ -16,7 +16,8 @@
 
 ## Git
 
-* [Introducción a Git](git/introduccion-a-git.md)
+* [Introducción a Git](git/introduccion-a-git/README.md)
+  * [GitHub Flow](git/introduccion-a-git/github-flow.md)
 * [Introducción a GitHub](git/introduccion-a-github.md)
 
 ## Manejo de formularios y ficheros

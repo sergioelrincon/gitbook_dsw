@@ -2,7 +2,7 @@
 description: >-
   El software de control de versiones diseñado por Linus Torvalds más usado en
   la actualidad.
-cover: ../.gitbook/assets/Git_icon.svg.png
+cover: ../../.gitbook/assets/Git_icon.svg.png
 coverY: 0
 ---
 
