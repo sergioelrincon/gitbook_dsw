@@ -63,14 +63,14 @@ Cuando hayas terminado tus cambios en la rama, crea un **pull request**. Este es
 
 ## Uso de etiquetas
 
-En GitHub Flow, el uso de **etiquetas (tags)** no es un requisito formal, pero vamos a incluirlas para llevar un registro claro de las versiones del proyecto, especialmente cuando alcancemos hitos importantes o se desea tener puntos de referencia en el tiempo. Podrían ser útiles en los sisguientes casos:
+En GitHub Flow, el uso de **etiquetas (tags)** no es un requisito formal, pero vamos a incluirlas para llevar un registro claro de las versiones del proyecto, especialmente cuando alcancemos hitos importantes o deseemos tener puntos de referencia en el tiempo.&#x20;
+
+En concreto las usaremos en estos casos:
 
 1. **Etiquetas para versiones de lanzamiento**:
-   * Crearemos etiquetas en la rama `main` cada vez que se alcance una nueva versión (Por ejemplo`v1.0`, `v1.1`, etc.). Esto ayuda a marcar el código estable y preparado para producción, facilitando un punto de retorno en caso de futuros cambios o ajustes.
+   * Crearemos etiquetas en la rama `main` cada vez que se alcance una nueva versión (Por ejemplo`v1.0`, `v1.1`, etc.). El momento en que se alcance una nueva versión lo decidiremos nosotros, aunque lo más conveniente será que se ajuste a cada uno de los hitos que definamos en la planificación del proyecto.
 2. **Etiquetas de hitos importantes**:
-   * Podemos emplear etiquetas para marcar momentos específicos del desarrollo, como la finalización de la administración de usuarios o la implementación de una corrección importante.
+   * Podemos emplear etiquetas para marcar momentos específicos del desarrollo, como la finalización de la administración de usuarios o la implementación de una corrección importante, pero que no necesariamente impliquen la creación de una nueva versión.
    * Estas etiquetas permiten al equipo referenciar el estado del proyecto en puntos específicos, facilitando la organización y el control de versiones.
-3. **Etiqueta de última versión estable**:
-   * Para un flujo continuo de desarrollo, puede ser útil etiquetar la última versión estable en `main`. Así, cualquier persona del equipo sabe exactamente qué versión está completamente probada y aprobada.
 
-Aunque GitHub Flow no incluye etiquetas de manera estricta, usarlas en estos momentos puede mejorar la trazabilidad y el control del proyecto.
+Aunque GitHub Flow no incluye etiquetas de manera estricta, usarlas siguiendo todos estas pautas puede mejorar la trazabilidad y el control del proyecto.
