@@ -70,6 +70,14 @@ coverY: 0
 * `git push -u origin <nombrederama>:` Sube la rama \<nombrederama> desde nuestro repositorio local a GitHub.
 * [Traer a nuestro repositorio local una rama creada previamente en GitHub](https://www.w3schools.com/git/git\_branch\_pull\_from\_remote.asp?remote=github)
 
+### Cómo eliminar los cambios realizados en el repositorio que aún no se han incorporado a él
+
+```
+git reset --hard
+git clean -fd
+
+```
+
 ### Comandos avanzados
 
 * git reset
