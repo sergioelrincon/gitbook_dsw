@@ -48,6 +48,7 @@
   * [Guard de autenticación](laravel/laravel-jetstream/guard-de-autenticacion.md)
   * [Compilación de activos](laravel/laravel-jetstream/compilacion-de-activos.md)
   * [web.php](laravel/laravel-jetstream/web.php.md)
+  * [Modificación del logo](laravel/laravel-jetstream/modificacion-del-logo.md)
 
 ## Servicios web
 
