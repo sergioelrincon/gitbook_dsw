@@ -25,3 +25,5 @@ Por ejemplo, podemos sustituir el contenido actual por el siguiente, que reempla
    </svg>
 </a>
 ```
+
+Puedes encontrar más iconos en [https://www.svgrepo.com](https://www.svgrepo.com/)
