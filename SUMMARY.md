@@ -49,7 +49,9 @@
   * [Compilación de activos](laravel/laravel-jetstream/compilacion-de-activos.md)
   * [web.php](laravel/laravel-jetstream/web.php.md)
   * [Modificación del logo](laravel/laravel-jetstream/modificacion-del-logo.md)
+* [AdminLTE](laravel/adminlte.md)
 * [Personalización del idioma](laravel/personalizacion-del-idioma.md)
+* [Laravel Debugbar](laravel/laravel-debugbar.md)
 
 ## Servicios web
 
