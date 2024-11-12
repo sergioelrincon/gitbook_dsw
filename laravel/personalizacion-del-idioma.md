@@ -21,6 +21,8 @@ Para configurar el idioma en un proyecto Laravel y utilizar el archivo `es.json`
 
     ```php
     APP_LOCALE=es
+    APP_FALLBACK_LOCALE=es
+    APP_FAKER_LOCALE=es_ES
     ```
 4.  **Usar las traducciones en nuestras vistas**\
     Para utilizar las traducciones en nuestras vistas, empleamos el helper `__('clave')` o el método `@lang('clave')` de Blade. Laravel buscará la clave en el archivo `es.json` si el idioma configurado es el español.
