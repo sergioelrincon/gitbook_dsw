@@ -38,7 +38,8 @@
 
 * [Introducción](laravel/laravel.md)
 * [Blade](laravel/blade.md)
-* [Routing](laravel/routing.md)
+* [Routing](laravel/routing/README.md)
+  * [Route::resource](laravel/routing/route-resource.md)
 * [Controladores](laravel/controladores/README.md)
   * [Request](laravel/controladores/request.md)
 * [Bases de datos](laravel/bases-de-datos.md)
