@@ -45,7 +45,7 @@ $table->string("username");
 
 El método "timestamps" creará las columnas "created\_at" y "updated\_at".
 
-Podemos conocer todos los tipos de campos en [https://laravel.com/docs/10.x/migrations#available-column-tfacaypes](https://laravel.com/docs/10.x/migrations#available-column-types)
+Podemos conocer todos los tipos de campos en [https://laravel.com/docs/11.x/migrations#available-column-tfacaypes](https://laravel.com/docs/11.x/migrations#available-column-tfacaypes)
 
 Además de [crear tablas](https://laravel.com/docs/10.x/migrations#creating-tables), como en el ejemplo anterior, podemos [modificarlas ](https://laravel.com/docs/10.x/migrations#updating-tables)y [renombrarlas/borrarlas](https://laravel.com/docs/10.x/migrations#renaming-and-dropping-tables).&#x20;
 
