@@ -42,6 +42,7 @@
   * [Route::resource](laravel/routing/route-resource.md)
 * [Controladores](laravel/controladores/README.md)
   * [Request](laravel/controladores/request.md)
+  * [Almacenamiento de contraseñas](laravel/controladores/almacenamiento-de-contrasenas.md)
 * [Bases de datos](laravel/bases-de-datos.md)
 * [Modelos](laravel/modelos/README.md)
   * [Scopes](laravel/modelos/scopes.md)
