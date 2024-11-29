@@ -1,4 +1,4 @@
-# Definición de rutas
+# Denominación de rutas
 
 ## Convención para definir rutas personalizadas en Laravel
 

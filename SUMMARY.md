@@ -39,7 +39,7 @@
 * [Introducción](laravel/laravel.md)
 * [Blade](laravel/blade.md)
 * [Routing](laravel/routing/README.md)
-  * [Definición de rutas](laravel/routing/definicion-de-rutas.md)
+  * [Denominación de rutas](laravel/routing/denominacion-de-rutas.md)
   * [Route::resource](laravel/routing/route-resource.md)
 * [Controladores](laravel/controladores/README.md)
   * [Request](laravel/controladores/request.md)
