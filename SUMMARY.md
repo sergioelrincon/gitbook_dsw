@@ -42,6 +42,7 @@
   * [Denominación de rutas](laravel/routing/denominacion-de-rutas.md)
   * [Route::resource](laravel/routing/route-resource.md)
 * [Controladores](laravel/controladores/README.md)
+  * [Validación de formularios](laravel/controladores/validacin-d7a-de-formularios.md)
   * [Request](laravel/controladores/request.md)
   * [Almacenamiento de contraseñas](laravel/controladores/almacenamiento-de-contrasenas.md)
 * [Bases de datos](laravel/bases-de-datos.md)
