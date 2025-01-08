@@ -8,15 +8,15 @@ Al usar `Route::resource`, Laravel automáticamente asocia las rutas con los mé
 
 Para `Route::resource('users', UserController::class);`(definido así en el fichero web.php), se generan automáticamente las siguientes rutas:
 
-| Método HTTP | URL                      | Nombre de la ruta | Método del controlador |
-| ----------- | ------------------------ | ----------------- | ---------------------- |
-| GET         | /admin/users             | users.index       | `index()`              |
-| GET         | /admin/users/create      | users.create      | `create()`             |
-| POST        | /admin/users             | users.store       | `store()`              |
-| GET         | /admin/users/{user}      | users.show        | `show($id)`            |
-| GET         | /admin/users/{user}/edit | users.edit        | `edit($id)`            |
-| PUT/PATCH   | /admin/users/{user}      | users.update      | `update($id)`          |
-| DELETE      | /admin/users/{user}      | users.destroy     | `destroy($id)`         |
+| Método HTTP | URL                | Nombre de la ruta | Método del controlador |
+| ----------- | ------------------ | ----------------- | ---------------------- |
+| GET         | /users             | users.index       | `index()`              |
+| GET         | /users/create      | users.create      | `create()`             |
+| POST        | /users             | users.store       | `store()`              |
+| GET         | /users/{user}      | users.show        | `show($id)`            |
+| GET         | /users/{user}/edit | users.edit        | `edit($id)`            |
+| PUT/PATCH   | /users/{user}      | users.update      | `update($id)`          |
+| DELETE      | /users/{user}      | users.destroy     | `destroy($id)`         |
 
 #### ¿Por qué no se ven explícitas?
 
