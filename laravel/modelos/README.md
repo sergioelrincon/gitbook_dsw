@@ -18,11 +18,12 @@ Consideraciones importantes respecto al modelo:
 
 Eloquent proporciona a nuestros modelos los siguientes métodos:
 
-* Product::all(): devuelve todos los productos.
-* Product::find(1): devuelve el producto con id=1.
-* Product::findOrFail(1): igual que el anterior pero devuelve una excepción si no encuentra el registro.
-* Product::create(\['name' => 'TV', ...]): crea un nuevo registro en la base de datos.
-* Product::destroy(1): elimina el registro con id=1.
+* Product::**all**(): devuelve todos los productos.
+* Product::**pluck**("name", "id"): extrae una lista de valores de una columna específica. En el primer argumento indicamos la columna cuyos valores queremos extraer. El segundo, la columna que se usará como clave en el array resultante.&#x20;
+* Product::**find**(1): devuelve el producto con id=1.
+* Product::**findOrFail**(1): igual que el anterior pero devuelve una excepción si no encuentra el registro.
+* Product::**create**(\['name' => 'TV', ...]): crea un nuevo registro en la base de datos.
+* Product::**destroy**(1): elimina el registro con id=1.
 
 El siguiente ejemplo muestra cómo podemos acceder al resultado de uno de los métodos anteriores:
 
