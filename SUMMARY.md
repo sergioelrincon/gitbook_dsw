@@ -37,7 +37,8 @@
 ## Laravel
 
 * [Introducción](laravel/laravel.md)
-* [Blade](laravel/blade.md)
+* [Blade](laravel/blade/README.md)
+  * [Paginación y filtrado](laravel/blade/paginacion-y-filtrado.md)
 * [Routing](laravel/routing/README.md)
   * [Denominación de rutas](laravel/routing/denominacion-de-rutas.md)
   * [Route::resource](laravel/routing/route-resource.md)
