@@ -51,6 +51,25 @@ De esta manera, nuestros controladores se vuelven más limpios, y la lógica de 
 
 ### Implementación paso a paso
 
+Para que tu proyecto use las plantillas de paginación y puedas personalizarlas, necesitas “publicar” los archivos de paginación que vienen en el _core_ de Laravel. Esto se hace con el comando:
+
+```bash
+php artisan vendor:publish --tag=laravel-pagination
+```
+
+Este comando hace lo siguiente:
+
+* Copia las **plantillas de paginación** por defecto de Laravel hacia la carpeta `resources/views/vendor/pagination`.
+* Te permite **editar** y **personalizar** el diseño de la paginación sin afectar los archivos originales que vienen con Laravel.
+
+Por ejemplo, si ejecutas ese comando, podrás encontrar (o crear) un archivo como `resources/views/vendor/pagination/bootstrap-4.blade.php`, donde Laravel define la apariencia de los enlaces de paginación (botones “Anterior”, “Siguiente”, etc.). Después, cuando llamas a:
+
+```php
+{{ $users->links('vendor.pagination.bootstrap-4') }}
+```
+
+Laravel usará tu plantilla publicada en lugar de la predeterminada. Así, si quieres cambiar etiquetas HTML, clases de CSS, íconos, o cualquier otro detalle, podrás hacerlo libremente en esa carpeta.
+
 #### El modelo (User.php)
 
 En tu modelo `User`, defines los _scopes_ que te permiten filtrar los resultados por nombre o por email. También puedes definir un _scope_ para ordenar por un campo, etc.
