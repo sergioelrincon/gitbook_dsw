@@ -45,6 +45,21 @@ En este ejemplo:
 * El campo `email` también es obligatorio, debe tener un formato de correo electrónico (`email`) y ser único en la tabla `users` (`unique:users,email`). Se usa `$this->user` para permitir la actualización de un usuario específico sin conflictos.
 * El campo `password` debe ser una cadena (`string`), con un mínimo de 8 caracteres (`min:8`) y debe coincidir con el campo de confirmación (`confirmed`).
 
+Los mensajes personalizados también los puedes incluir en el nuevo request. Para ello debes definir un nuevo método denominado "messages()":
+
+```php
+
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'El nombre es obligatorio',
+            'email.required' => 'El correo es obligatorio',
+            'email.email' => 'El correo debe ser válido',
+        ];
+    }
+
+```
+
 Luego, puedes inyectar esta clase `UserRequest` directamente en el método del controlador en lugar de usar la clase general `Request`:
 
 ```php
