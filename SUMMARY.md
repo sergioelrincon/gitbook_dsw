@@ -13,6 +13,7 @@
 * [Estructuras de datos complejas](introduccion-a-php/estructuras-de-datos-complejas.md)
 * [Clases y objetos](introduccion-a-php/clases-y-objetos.md)
 * [Referencia](introduccion-a-php/referencia.md)
+* [Java vs PHP](introduccion-a-php/java-vs-php.md)
 
 ## Git
 
