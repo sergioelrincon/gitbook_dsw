@@ -315,3 +315,7 @@ $p->mostrar();
 * PHP y Java son potentes pero diferentes: uno es ligero y flexible, el otro es más estructurado y robusto.
 * Entender sus diferencias te permite elegir mejor la herramienta para cada proyecto.
 * Ambos permiten POO, pero la implementación varía en rigor, sintaxis y contexto de uso.
+
+### Ficheros adjuntos
+
+{% file src="../.gitbook/assets/php_vs_java_ejemplos.zip" %}
